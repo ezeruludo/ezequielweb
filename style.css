@@ -34,7 +34,6 @@ a{color:inherit;text-decoration:none}
 .hero-meta{margin-top:5vh}
 .hero-portrait{position:relative;margin:0}
 .hero-portrait img{width:100%;filter:grayscale(1) contrast(1.05);transition:filter .4s}
-.hero-portrait:hover img{filter:none}
 .hero-portrait figcaption{margin-top:12px;font:11px var(--mono);text-transform:uppercase;letter-spacing:.04em}
 .hero-mark{position:absolute;left:-46px;top:-42px;width:104px;height:104px;color:var(--sandia);transform:rotate(18deg);pointer-events:none;overflow:visible}
 
@@ -48,7 +47,6 @@ a{color:inherit;text-decoration:none}
 .index-card.sandia{background:var(--sandia)}
 .index-card.cream{background:var(--cream)}
 .index-card.black{background:var(--black);color:var(--cream)}
-.index-card:hover{transform:translateY(-6px);transition:.25s}
 
 .section{max-width:var(--max);margin:auto;padding:110px 7vw;border-bottom:1px solid var(--black)}
 .split{display:grid;grid-template-columns:1fr 2fr;gap:7vw}
@@ -85,7 +83,6 @@ a{color:inherit;text-decoration:none}
 .essays{max-width:var(--max);margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .essay-card figure{margin:0;overflow:hidden;background:rgba(0,0,0,.2)}
 .essay-card img{width:100%;aspect-ratio:2/3;object-fit:cover;transition:transform .5s}
-.essay-card:hover img{transform:scale(1.04)}
 .essay-card h3{font:500 27px/1 var(--serif);margin:16px 0 5px}
 .essay-card span{font:11px var(--mono);text-transform:uppercase;letter-spacing:.04em;opacity:.7}
 
@@ -128,7 +125,7 @@ footer{display:grid;grid-template-columns:2fr 2fr 1fr;gap:30px;padding:55px 7vw;
   .hero-tagline{font-size:36px;margin-top:38px}
   .hero-intro{font-size:17px}
   .hero-meta{margin-top:30px}
-  .hero-mark{left:auto;right:4px;top:-30px;width:74px;height:74px}
+  .hero-mark{left:auto;right:4px;top:-30px;width:74px!important;height:74px!important}
   .index-grid{grid-template-columns:1fr 1fr}
   .index-card{min-height:190px;padding:17px}
   .index-card strong{font-size:22px}
@@ -149,4 +146,10 @@ footer{display:grid;grid-template-columns:2fr 2fr 1fr;gap:30px;padding:55px 7vw;
   .essay-head h1{font-size:62px}
   .plates{padding:50px 20px 70px;gap:50px}
   .essay-nav{padding:0 20px 60px}
+}
+
+@media(hover:hover){
+  .hero-portrait:hover img{filter:none}
+  .index-card:hover{transform:translateY(-6px);transition:.25s}
+  .essay-card:hover img{transform:scale(1.04)}
 }
