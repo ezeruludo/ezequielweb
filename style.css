@@ -39,11 +39,11 @@ a{color:inherit;text-decoration:none}
 .hero-mark{position:absolute;left:-52px;top:-46px;color:var(--sandia);font:110px var(--serif);transform:rotate(18deg);pointer-events:none}
 
 .index-grid{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--black)}
-.index-card{min-height:240px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--black)}
+.index-card{min-height:240px;padding:22px;display:grid;grid-template-rows:auto 1fr auto;border-right:1px solid var(--black)}
 .index-card:last-child{border-right:0}
 .index-card span{font:11px var(--mono)}
-.index-card strong{font:600 28px/.95 var(--sans);letter-spacing:-.04em}
-.index-card em{font:14px var(--serif)}
+.index-card strong{align-self:end;font:600 28px/.95 var(--sans);letter-spacing:-.04em}
+.index-card em{display:block;min-height:1.35em;margin-top:10px;font:14px/1.35 var(--serif)}
 .index-card.green{background:var(--green);color:var(--cream)}
 .index-card.sandia{background:var(--sandia)}
 .index-card.cream{background:var(--cream)}
