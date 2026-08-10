@@ -1,0 +1,9 @@
+# Archivos que macOS crea solo y no son parte del sitio
+.DS_Store
+._*
+
+# Comprimidos y respaldos
+*.zip
+
+# Fotos originales sin redimensionar: viven fuera del repositorio
+/originales/
