@@ -132,6 +132,8 @@ footer{display:grid;grid-template-columns:2fr 2fr 1fr;gap:30px;padding:55px 7vw;
   .split,.cv-band{grid-template-columns:1fr}
   .section{padding:70px 20px}
   .lead{font-size:26px}
+  .head-epigrafe{max-width:none;margin-top:26px;font-size:14px;line-height:1.55}
+  .head-epigrafe cite{margin-top:12px}
   .archive-item{grid-template-columns:52px 1fr;gap:16px}
   .pub{grid-template-columns:52px 1fr;gap:16px;padding:24px 0}
   .pub h3{font-size:22px}
@@ -153,6 +155,9 @@ footer{display:grid;grid-template-columns:2fr 2fr 1fr;gap:30px;padding:55px 7vw;
   .essay-nav{padding:0 20px 60px}
 }
 
+.head-epigrafe{margin:36px 0 0;padding:0;max-width:330px;font:italic 400 15px/1.58 var(--serif);color:rgba(28,27,26,.8)}
+.head-epigrafe p{margin:0}
+.head-epigrafe cite{display:block;margin-top:16px;font:11px var(--mono);font-style:normal;letter-spacing:.04em;text-transform:uppercase;color:rgba(28,27,26,.5)}
 .section-sub{margin:18px 0 0;font:11px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:rgba(28,27,26,.6)}
 
 .pub{display:grid;grid-template-columns:90px 1fr;gap:30px;padding:30px 0;border-top:1px solid var(--black);align-items:start}
