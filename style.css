@@ -133,6 +133,11 @@ footer{display:grid;grid-template-columns:2fr 2fr 1fr;gap:30px;padding:55px 7vw;
   .section{padding:70px 20px}
   .lead{font-size:26px}
   .archive-item{grid-template-columns:52px 1fr;gap:16px}
+  .pub{grid-template-columns:52px 1fr;gap:16px;padding:24px 0}
+  .pub h3{font-size:22px}
+  .epigrafe{padding-left:18px;margin-top:28px}
+  .epigrafe p{font-size:18px}
+  .epigrafe p.verso{font-size:17px}
   .tag{display:none}
   .archive-item h3{font-size:22px}
   .photo-section{padding:70px 20px}
@@ -147,6 +152,32 @@ footer{display:grid;grid-template-columns:2fr 2fr 1fr;gap:30px;padding:55px 7vw;
   .plates{padding:50px 20px 70px;gap:50px}
   .essay-nav{padding:0 20px 60px}
 }
+
+.section-sub{margin:18px 0 0;font:11px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:rgba(28,27,26,.6)}
+
+.pub{display:grid;grid-template-columns:90px 1fr;gap:30px;padding:30px 0;border-top:1px solid var(--black);align-items:start}
+.pub-body{max-width:760px}
+.pub h3{font:500 27px/1.14 var(--serif);margin:0 0 13px}
+.pub-autores{margin:0 0 3px;font-size:14px;font-weight:500}
+.pub-ref{margin:0 0 18px;font-size:14px;color:rgba(28,27,26,.72)}
+.pub-acciones{display:flex;align-items:center;gap:16px;margin:0;flex-wrap:wrap}
+.tipo{font:11px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:rgba(28,27,26,.6)}
+.ir{display:inline-block;border:1px solid var(--black);padding:9px 15px;font:700 11px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.ir:hover{background:var(--black);color:var(--cream)}
+#publicaciones .ir:hover{color:var(--sandia)}
+
+.essay-head .back-link{display:inline-block;margin-bottom:28px}
+.epigrafe{margin:36px 0 0;max-width:640px;border-left:2px solid var(--sandia);padding-left:26px}
+.epigrafe p{font:400 21px/1.5 var(--serif);margin:0 0 16px}
+.epigrafe p.verso{font-size:19px;line-height:1.62;margin-bottom:22px}
+.epigrafe p:last-of-type{margin-bottom:0}
+.epigrafe footer{margin-top:20px;font:11px var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.epigrafe cite{font-style:normal}
+.creditos{list-style:none;margin:32px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:14px 30px;max-width:640px}
+.creditos li{display:flex;flex-direction:column;gap:3px}
+.creditos b{font:11px var(--mono);letter-spacing:.04em;text-transform:uppercase;font-weight:400;color:rgba(28,27,26,.55)}
+.creditos a{font-size:14px;border-bottom:1px solid rgba(28,27,26,.3)}
+.creditos a:hover{color:var(--sandia);border-bottom-color:var(--sandia)}
 
 @media(hover:hover){
   .hero-portrait:hover img{filter:none}
