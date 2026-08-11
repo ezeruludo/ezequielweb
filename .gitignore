@@ -7,3 +7,6 @@
 
 # Fotos originales sin redimensionar: viven fuera del repositorio
 /originales/
+
+# Notas de trabajo, no van al sitio
+CLAUDE.md
