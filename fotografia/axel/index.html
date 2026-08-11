@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../style.css?v=10">
+<link rel="stylesheet" href="../../style.css?v=11">
 </head>
 <body>
 <header class="site-header">
@@ -41,35 +41,36 @@
     <ul class="creditos"><li><b>Retrato</b><a href="https://www.instagram.com/axelfitboy/" target="_blank" rel="noopener">@axelfitboy</a></li></ul>
   </section>
   <section class="plates">
-    <figure>
-      <img src="../../assets/fotografia/axel/01.jpg" alt="Axel, imagen 1" width="1800" height="1200" loading="lazy">
-      <figcaption>Axel — 01 / 06</figcaption>
-    </figure>
-    <figure>
-      <img src="../../assets/fotografia/axel/02.jpg" alt="Axel, imagen 2" width="1200" height="1800" loading="lazy">
-      <figcaption>Axel — 02 / 06</figcaption>
-    </figure>
-    <figure>
-      <img src="../../assets/fotografia/axel/03.jpg" alt="Axel, imagen 3" width="1200" height="1800" loading="lazy">
-      <figcaption>Axel — 03 / 06</figcaption>
-    </figure>
-    <figure>
-      <img src="../../assets/fotografia/axel/04.jpg" alt="Axel, imagen 4" width="1800" height="1231" loading="lazy">
-      <figcaption>Axel — 04 / 06</figcaption>
-    </figure>
-    <figure>
-      <img src="../../assets/fotografia/axel/05.jpg" alt="Axel, imagen 5" width="1200" height="1800" loading="lazy">
-      <figcaption>Axel — 05 / 06</figcaption>
-    </figure>
-    <figure>
-      <img src="../../assets/fotografia/axel/06.jpg" alt="Axel, imagen 6" width="1200" height="1800" loading="lazy">
-      <figcaption>Axel — 06 / 06</figcaption>
-    </figure>
+    <button class="plate" type="button" data-full="../../assets/fotografia/axel/01.jpg" aria-label="Ampliar imagen 1 de 6">
+      <img src="../../assets/fotografia/axel/01-thumb.jpg" srcset="../../assets/fotografia/axel/01-thumb.jpg 800w, ../../assets/fotografia/axel/01.jpg 1800w" sizes="(max-width:620px) 86vw, (max-width:800px) 44vw, min(560px, 44vw)" alt="Axel, imagen 1" width="1800" height="1200" loading="lazy" decoding="async">
+    </button>
+    <button class="plate" type="button" data-full="../../assets/fotografia/axel/02.jpg" aria-label="Ampliar imagen 2 de 6">
+      <img src="../../assets/fotografia/axel/02-thumb.jpg" srcset="../../assets/fotografia/axel/02-thumb.jpg 533w, ../../assets/fotografia/axel/02.jpg 1200w" sizes="(max-width:620px) 86vw, (max-width:800px) 44vw, min(560px, 44vw)" alt="Axel, imagen 2" width="1200" height="1800" loading="lazy" decoding="async">
+    </button>
+    <button class="plate" type="button" data-full="../../assets/fotografia/axel/03.jpg" aria-label="Ampliar imagen 3 de 6">
+      <img src="../../assets/fotografia/axel/03-thumb.jpg" srcset="../../assets/fotografia/axel/03-thumb.jpg 533w, ../../assets/fotografia/axel/03.jpg 1200w" sizes="(max-width:620px) 86vw, (max-width:800px) 44vw, min(560px, 44vw)" alt="Axel, imagen 3" width="1200" height="1800" loading="lazy" decoding="async">
+    </button>
+    <button class="plate" type="button" data-full="../../assets/fotografia/axel/04.jpg" aria-label="Ampliar imagen 4 de 6">
+      <img src="../../assets/fotografia/axel/04-thumb.jpg" srcset="../../assets/fotografia/axel/04-thumb.jpg 800w, ../../assets/fotografia/axel/04.jpg 1800w" sizes="(max-width:620px) 86vw, (max-width:800px) 44vw, min(560px, 44vw)" alt="Axel, imagen 4" width="1800" height="1231" loading="lazy" decoding="async">
+    </button>
+    <button class="plate" type="button" data-full="../../assets/fotografia/axel/05.jpg" aria-label="Ampliar imagen 5 de 6">
+      <img src="../../assets/fotografia/axel/05-thumb.jpg" srcset="../../assets/fotografia/axel/05-thumb.jpg 533w, ../../assets/fotografia/axel/05.jpg 1200w" sizes="(max-width:620px) 86vw, (max-width:800px) 44vw, min(560px, 44vw)" alt="Axel, imagen 5" width="1200" height="1800" loading="lazy" decoding="async">
+    </button>
+    <button class="plate" type="button" data-full="../../assets/fotografia/axel/06.jpg" aria-label="Ampliar imagen 6 de 6">
+      <img src="../../assets/fotografia/axel/06-thumb.jpg" srcset="../../assets/fotografia/axel/06-thumb.jpg 533w, ../../assets/fotografia/axel/06.jpg 1200w" sizes="(max-width:620px) 86vw, (max-width:800px) 44vw, min(560px, 44vw)" alt="Axel, imagen 6" width="1200" height="1800" loading="lazy" decoding="async">
+    </button>
   </section>
   <nav class="essay-nav">
     <a href="../proletario-do-porno/">←︎ Proletário do pornô</a>
     <a href="../john-y-cuban/">John y Cuban →︎</a>
   </nav>
+<div class="lb" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
+  <div class="lb-stage"><img alt=""></div>
+  <button class="lb-close" type="button" aria-label="Cerrar">Cerrar</button>
+  <button class="lb-prev" type="button" aria-label="Anterior">←︎</button>
+  <button class="lb-next" type="button" aria-label="Siguiente">→︎</button>
+  <div class="lb-bar"><span class="lb-count"></span></div>
+</div>
 </main>
 <footer>
   <div class="footer-name">EZEQUIEL<br>AGUILERA</div>
@@ -84,6 +85,76 @@
 <script>
 const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav');
 if(toggle){toggle.addEventListener('click',()=>{const o=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!o));nav.classList.toggle('open');});}
+</script>
+<script>
+(function(){
+  var grid=document.querySelector('.plates');
+  var plates=grid?[].slice.call(grid.querySelectorAll('.plate')):[];
+  if(!plates.length)return;
+  function layout(){
+    var cs=getComputedStyle(grid);
+    if(cs.display!=='grid'){plates.forEach(function(p){p.style.gridRowEnd=''});return;}
+    var row=parseFloat(cs.gridAutoRows)||8,gap=parseFloat(cs.rowGap)||0;
+    plates.forEach(function(p){
+      var h=p.getBoundingClientRect().height;
+      p.style.gridRowEnd='span '+Math.max(1,Math.round((h+gap)/(row+gap)));
+    });
+  }
+  layout();
+  window.addEventListener('resize',layout);
+  window.addEventListener('load',layout);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(layout);
+
+  var lb=document.querySelector('.lb');if(!lb)return;
+  var stage=lb.querySelector('.lb-stage'),img=stage.querySelector('img'),
+      count=lb.querySelector('.lb-count'),closeBtn=lb.querySelector('.lb-close'),
+      i=0,last=null;
+  function show(n){
+    i=(n+plates.length)%plates.length;
+    var b=plates[i];
+    img.src=b.getAttribute('data-full');
+    img.alt=b.querySelector('img').getAttribute('alt')||'';
+    count.textContent=(i+1)+' / '+plates.length;
+    [i+1,i-1].forEach(function(k){
+      var o=plates[(k+plates.length)%plates.length];
+      if(o&&o!==b){var pre=new Image();pre.src=o.getAttribute('data-full');}
+    });
+  }
+  function open(n){
+    last=document.activeElement;
+    show(n);
+    lb.hidden=false;lb.classList.add('open');
+    document.body.classList.add('lb-lock');
+    closeBtn.focus();
+  }
+  function close(){
+    lb.classList.remove('open');lb.hidden=true;
+    document.body.classList.remove('lb-lock');
+    img.removeAttribute('src');
+    if(last&&last.focus)last.focus();
+  }
+  plates.forEach(function(b,n){b.addEventListener('click',function(){open(n)})});
+  closeBtn.addEventListener('click',close);
+  lb.querySelector('.lb-prev').addEventListener('click',function(){show(i-1)});
+  lb.querySelector('.lb-next').addEventListener('click',function(){show(i+1)});
+  lb.addEventListener('click',function(e){
+    if(e.target===lb||e.target===stage||e.target===img)close();
+  });
+  document.addEventListener('keydown',function(e){
+    if(lb.hidden)return;
+    if(e.key==='Escape'){close();}
+    else if(e.key==='ArrowLeft'){show(i-1);}
+    else if(e.key==='ArrowRight'){show(i+1);}
+  });
+  var x0=null;
+  lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){
+    if(x0===null)return;
+    var dx=e.changedTouches[0].clientX-x0;
+    if(Math.abs(dx)>50)show(dx<0?i+1:i-1);
+    x0=null;
+  },{passive:true});
+})();
 </script>
 </body>
 </html>
