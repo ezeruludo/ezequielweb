@@ -102,6 +102,10 @@ a{color:inherit;text-decoration:none}
 .button:hover{background:var(--black);color:var(--sandia)}
 
 footer{display:grid;grid-template-columns:2fr 2fr 1fr;gap:30px;padding:55px 7vw;background:var(--black);color:var(--cream)}
+#contacto{scroll-margin-top:72px}
+.footer-head{grid-column:1/-1;display:flex;align-items:baseline;gap:28px;padding-bottom:26px;border-bottom:1px solid rgba(243,236,220,.22)}
+.footer-head span,.footer-head h2{margin:0;font:11px var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.footer-head span{color:rgba(243,236,220,.55)}
 .footer-id{display:flex;flex-direction:column;align-items:flex-start;gap:17px}
 .footer-name{font:500 50px/.75 var(--serif)}
 .footer-mail{font:400 italic 21px/1.25 var(--serif);border-bottom:1px solid rgba(243,236,220,.35);padding-bottom:2px;overflow-wrap:anywhere}
