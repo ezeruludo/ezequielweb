@@ -451,3 +451,44 @@ footer>*{position:relative}
   .essay-head::before{left:20px;top:70px;width:26px;height:26px}
   .essay-head .back-link{margin-left:38px}
 }
+
+/* ============================================================
+   PUBLICACIONES COMO PLACAS
+   Reconstruccion en HTML de las placas que Ezequiel hizo para
+   Instagram: foto arriba, faja de color con el titulo, pie con la
+   referencia y el resumen plegado. El color de cada faja sale
+   muestreado de su placa original. Los titulos van restituidos:
+   el leet ("p0rn0", "s3xu4l") era para esquivar la moderacion de
+   Meta y aca no hace falta.
+   ============================================================ */
+.placas{margin-top:34px;display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:26px}
+.placa{display:flex;flex-direction:column;background:var(--acento);color:var(--tinta);
+  border:1px solid rgba(247,232,226,.22)}
+.placa-foto{margin:0;overflow:hidden;background:rgba(0,0,0,.25)}
+/* Sin aspect-ratio forzado: cada banda conserva la proporcion que tenia
+   en su placa. Campos es 1.76:1 y un recorte a 4/3 le comia el logo. */
+.placa-foto img{width:100%;height:auto;display:block;transition:transform .6s ease}
+.placa:hover .placa-foto img{transform:scale(1.03)}
+.placa-faja{padding:16px 18px 18px}
+.placa-meta{margin:0 0 9px;font:11px var(--mono);letter-spacing:.06em;text-transform:uppercase;opacity:.72}
+.placa-meta b{font-weight:700;opacity:1}
+.placa h3{font-family:var(--serif);font-weight:500;font-size:21px;line-height:1.16;margin:0 0 10px;
+  text-wrap:balance}
+.placa-autores{margin:0;font-size:13px;font-weight:500;opacity:.9}
+.placa-pie{margin-top:auto;padding:15px 18px 18px;border-top:1px solid currentColor;
+  background:rgba(0,0,0,.14)}
+.placa-ref{margin:0 0 12px;font-size:12.5px;line-height:1.45;opacity:.82}
+.placa-resumen{margin:0 0 13px;font-size:13px}
+.placa-resumen summary{cursor:pointer;font:700 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;
+  opacity:.8;list-style:none}
+.placa-resumen summary::-webkit-details-marker{display:none}
+.placa-resumen summary::before{content:"+ ";font-weight:700}
+.placa-resumen[open] summary::before{content:"\2212 "}
+.placa-resumen summary:hover{opacity:1}
+.placa-resumen p{margin:11px 0 0;line-height:1.5;opacity:.9}
+.placa .ir{border-color:currentColor;color:inherit;padding:8px 13px}
+.placa .ir:hover{background:var(--tinta);color:var(--acento);border-color:var(--tinta)}
+@media(max-width:620px){
+  .placas{grid-template-columns:1fr;gap:20px}
+  .placa h3{font-size:22px}
+}
