@@ -516,7 +516,7 @@ footer>*{position:relative}
   color:rgba(28,27,26,.55)}
 .cartas{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
 
-.carta{background:var(--acento);color:var(--crema-rosa);position:relative;
+.carta{background:var(--acento);color:var(--tinta,var(--crema-rosa));position:relative;
   border:1px solid rgba(243,236,220,.3);box-shadow:3px 3px 0 rgba(28,27,26,.18);
   transition:box-shadow .3s ease,transform .3s ease}
 .carta:hover{box-shadow:5px 5px 0 var(--fluor);transform:translate(-1px,-1px)}
@@ -540,7 +540,7 @@ footer>*{position:relative}
   letter-spacing:.015em;text-shadow:.03em .028em 0 var(--fluor)}
 .carta-pico{display:block;margin-top:10px;font:400 14px/1.4 var(--serif);opacity:.92;max-width:36ch}
 .carta-firma{display:block;margin-top:11px;padding-top:10px;border-top:1px solid currentColor;
-  font:11px/1.45 var(--mono);letter-spacing:.03em;color:var(--oro);opacity:.95;max-width:40ch}
+  font:11px/1.45 var(--mono);letter-spacing:.03em;color:var(--firma,var(--oro));opacity:.95;max-width:40ch}
 .carta-dorso{padding:0 26px 28px;max-width:72ch}
 .carta-dorso p{margin:0 0 15px;font-size:15px;line-height:1.56}
 .carta-dorso p:last-child{margin-bottom:0}
@@ -548,7 +548,7 @@ footer>*{position:relative}
 .carta-accion{margin:4px 0 0!important}
 .carta-dorso .ir{display:inline-block;border:1px solid currentColor;color:inherit;
   padding:8px 13px;font:700 11px var(--mono);letter-spacing:.06em;text-transform:uppercase}
-.carta-dorso .ir:hover{background:var(--crema-rosa);color:var(--acento);border-color:var(--crema-rosa)}
+.carta-dorso .ir:hover{background:var(--tinta,var(--crema-rosa));color:var(--acento);border-color:var(--tinta,var(--crema-rosa))}
 .carta-dorso em{font-style:italic}
 
 .carta[open]>summary{grid-template-columns:76px 1fr;justify-items:start;text-align:left;
@@ -659,9 +659,12 @@ body{overflow-x:clip;overflow-wrap:break-word}
 
 /* Anclas de lectura en la prosa larga: media negrita sobre un resaltador
    fluor muy bajo. Le da al ojo donde agarrarse sin romper el parrafo. */
-.section-body p b{font-weight:600;
-  box-shadow:inset 0 -.3em 0 rgba(255,61,134,.18);
-  padding:0 .06em}
+/* Anclas de lectura: resaltador sobre la palabra entera y NADA de negrita.
+   Las dos cosas juntas pesaban demasiado. Los links de la prosa llevan su
+   subrayado fluor y no van resaltados: dos señales distintas, una por cosa. */
+.section-body p mark{background:rgba(255,61,134,.2);color:inherit;
+  padding:.08em .12em;border-radius:1px;box-decoration-break:clone;
+  -webkit-box-decoration-break:clone}
 
 /* Links dentro de la prosa de Sobre mi */
 .section-body p a{border-bottom:1px solid var(--fluor);padding-bottom:1px}
