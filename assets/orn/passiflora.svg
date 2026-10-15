@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" aria-hidden="true" focusable="false"><style>.tep{fill:none;stroke:currentColor;stroke-width:1.7}.sep{opacity:.72}.nerv{fill:none;stroke:currentColor;stroke-width:.8;opacity:.45}.fil{fill:none;stroke:currentColor;stroke-width:.85;opacity:.78;stroke-linecap:round}.fil2{opacity:.5}.disco{fill:none;stroke:currentColor;stroke-width:1.6}.disco2{fill:currentColor;opacity:.9}.tallo{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round}.antera{fill:none;stroke:currentColor;stroke-width:1.5}.estigma{fill:currentColor}</style>
+  <path class="tep sep" d="M218.38 181.62 C273.26 163.51 319.78 103.01 321.62 78.38 C296.99 80.22 236.49 126.74 218.38 181.62 Z"/>
+  <path class="nerv" d="M222.63 177.37 L316.67 83.33"/>
+  <path class="tep sep" d="M218.38 218.38 C236.49 273.26 296.99 319.78 321.62 321.62 C319.78 296.99 273.26 236.49 218.38 218.38 Z"/>
+  <path class="nerv" d="M222.63 222.63 L316.67 316.67"/>
+  <path class="tep sep" d="M181.62 218.38 C126.74 236.49 80.22 296.99 78.38 321.62 C103.01 319.78 163.51 273.26 181.62 218.38 Z"/>
+  <path class="nerv" d="M177.37 222.63 L83.33 316.67"/>
+  <path class="tep sep" d="M181.62 181.62 C163.51 126.74 103.01 80.22 78.38 78.38 C80.22 103.01 126.74 163.51 181.62 181.62 Z"/>
+  <path class="nerv" d="M177.37 177.37 L83.33 83.33"/>
+  <path class="tep pet" d="M200.0 174.0 C228.0 126.6 217.36 57.08 200.0 42.0 C182.64 57.08 172.0 126.6 200.0 174.0 Z"/>
+  <path class="nerv" d="M200.0 168.0 L200.0 49.0"/>
+  <path class="tep pet" d="M226.0 200.0 C273.4 228.0 342.92 217.36 358.0 200.0 C342.92 182.64 273.4 172.0 226.0 200.0 Z"/>
+  <path class="nerv" d="M232.0 200.0 L351.0 200.0"/>
+  <path class="tep pet" d="M200.0 226.0 C172.0 273.4 182.64 342.92 200.0 358.0 C217.36 342.92 228.0 273.4 200.0 226.0 Z"/>
+  <path class="nerv" d="M200.0 232.0 L200.0 351.0"/>
+  <path class="tep pet" d="M174.0 200.0 C126.6 172.0 57.08 182.64 42.0 200.0 C57.08 217.36 126.6 228.0 174.0 200.0 Z"/>
+  <path class="nerv" d="M168.0 200.0 L49.0 200.0"/>
+  <path class="fil" d="M227.0 200.0 Q273.15 200.0 306.0 200.0"/>
+  <path class="fil" d="M226.92 202.12 Q272.8 207.3 305.43 211.44"/>
+  <path class="fil" d="M226.67 204.22 Q271.94 213.37 304.09 220.43"/>
+  <path class="fil" d="M226.25 206.3 Q270.93 217.91 302.67 226.41"/>
+  <path class="fil" d="M225.68 208.34 Q269.84 221.76 301.36 231.07"/>
+  <path class="fil" d="M224.94 210.33 Q268.33 226.19 299.43 236.95"/>
+  <path class="fil" d="M224.06 212.26 Q265.88 231.83 295.85 245.37"/>
+  <path class="fil" d="M223.02 214.11 Q262.35 238.25 290.34 255.44"/>
+  <path class="fil" d="M221.84 215.87 Q258.25 244.28 283.89 264.87"/>
+  <path class="fil" d="M220.53 217.54 Q254.36 248.98 278.08 271.79"/>
+  <path class="fil" d="M219.09 219.09 Q251.14 252.31 273.79 276.12"/>
+  <path class="fil" d="M217.54 220.53 Q248.2 255.03 270.23 279.41"/>
+  <path class="fil" d="M215.87 221.84 Q244.58 258.03 265.48 283.45"/>
+  <path class="fil" d="M214.11 223.02 Q239.52 261.57 257.98 288.79"/>
+  <path class="fil" d="M212.26 224.06 Q233.15 265.21 248.0 294.51"/>
+  <path class="fil" d="M210.33 224.94 Q226.51 268.2 237.59 299.16"/>
+  <path class="fil" d="M208.34 225.68 Q220.77 270.17 229.08 302.01"/>
+  <path class="fil" d="M206.3 226.25 Q216.3 271.31 223.2 303.44"/>
+  <path class="fil" d="M204.22 226.67 Q212.38 272.1 218.45 304.4"/>
+  <path class="fil" d="M202.12 226.92 Q207.7 272.77 212.24 305.36"/>
+  <path class="fil" d="M200.0 227.0 Q201.5 273.15 203.0 306.0"/>
+  <path class="fil" d="M197.88 226.92 Q194.16 272.92 191.48 305.66"/>
+  <path class="fil" d="M195.78 226.67 Q186.95 271.99 180.2 304.19"/>
+  <path class="fil" d="M193.7 226.25 Q181.05 270.68 171.52 302.17"/>
+  <path class="fil" d="M191.66 225.68 Q176.67 269.33 165.79 300.34"/>
+  <path class="fil" d="M189.67 224.94 Q172.91 267.95 161.24 298.68"/>
+  <path class="fil" d="M187.74 224.06 Q168.55 266.07 155.39 296.24"/>
+  <path class="fil" d="M185.89 223.02 Q163.04 263.14 147.14 291.93"/>
+  <path class="fil" d="M184.13 221.84 Q156.89 259.1 137.48 285.6"/>
+  <path class="fil" d="M182.46 220.53 Q151.24 254.55 128.65 278.46"/>
+  <path class="fil" d="M180.91 219.09 Q146.92 250.37 122.34 272.25"/>
+  <path class="fil" d="M179.47 217.54 Q143.9 246.95 118.45 267.73"/>
+  <path class="fil" d="M178.16 215.87 Q141.41 243.81 115.42 263.93"/>
+  <path class="fil" d="M176.98 214.11 Q138.66 239.91 111.69 258.76"/>
+  <path class="fil" d="M175.94 212.26 Q135.48 234.51 106.88 250.72"/>
+  <path class="fil" d="M175.06 210.33 Q132.35 227.84 101.94 240.25"/>
+  <path class="fil" d="M174.32 208.34 Q129.92 221.02 98.16 229.59"/>
+  <path class="fil" d="M173.75 206.3 Q128.43 215.23 96.04 221.05"/>
+  <path class="fil" d="M173.33 204.22 Q127.64 210.75 95.09 215.2"/>
+  <path class="fil" d="M173.08 202.12 Q127.16 206.77 94.49 210.38"/>
+  <path class="fil" d="M173.0 200.0 Q126.85 201.98 94.0 203.97"/>
+  <path class="fil" d="M173.08 197.88 Q126.96 195.69 94.1 194.54"/>
+  <path class="fil" d="M173.33 195.78 Q127.78 188.36 95.37 183.02"/>
+  <path class="fil" d="M173.75 193.7 Q129.26 181.29 97.71 171.98"/>
+  <path class="fil" d="M174.32 191.66 Q131.01 175.6 100.36 163.65"/>
+  <path class="fil" d="M175.06 189.67 Q132.67 171.39 102.58 158.2"/>
+  <path class="fil" d="M175.94 187.74 Q134.34 167.74 104.59 153.77"/>
+  <path class="fil" d="M176.98 185.89 Q136.59 163.47 107.54 148.0"/>
+  <path class="fil" d="M178.16 184.13 Q139.99 158.14 112.59 139.98"/>
+  <path class="fil" d="M179.47 182.46 Q144.53 152.31 119.7 130.8"/>
+  <path class="fil" d="M180.91 180.91 Q149.48 147.07 127.45 122.64"/>
+  <path class="fil" d="M182.46 179.47 Q153.92 143.15 134.02 116.95"/>
+  <path class="fil" d="M184.13 178.16 Q157.52 140.45 138.72 113.5"/>
+  <path class="fil" d="M185.89 176.98 Q160.85 138.2 142.76 110.76"/>
+  <path class="fil" d="M187.74 175.94 Q165.02 135.73 148.33 107.36"/>
+  <path class="fil" d="M189.67 175.06 Q170.73 132.95 156.87 103.13"/>
+  <path class="fil" d="M191.66 174.32 Q177.65 130.35 167.75 99.02"/>
+  <path class="fil" d="M193.7 173.75 Q184.6 128.47 178.6 96.13"/>
+  <path class="fil" d="M195.78 173.33 Q190.4 127.46 187.11 94.72"/>
+  <path class="fil" d="M197.88 173.08 Q194.86 127.03 192.89 94.23"/>
+  <path class="fil" d="M200.0 173.0 Q198.88 126.85 197.76 94.0"/>
+  <path class="fil" d="M202.12 173.08 Q203.75 126.92 204.34 94.01"/>
+  <path class="fil" d="M204.22 173.33 Q210.1 127.54 213.89 94.88"/>
+  <path class="fil" d="M206.3 173.75 Q217.37 128.94 225.33 97.07"/>
+  <path class="fil" d="M208.34 174.32 Q224.26 130.97 236.06 100.26"/>
+  <path class="fil" d="M210.33 175.06 Q229.71 133.13 244.0 103.49"/>
+  <path class="fil" d="M212.26 175.94 Q233.72 135.08 249.14 106.07"/>
+  <path class="fil" d="M214.11 176.98 Q237.24 137.03 253.43 108.42"/>
+  <path class="fil" d="M215.87 178.16 Q241.38 139.65 259.08 111.9"/>
+  <path class="fil" d="M217.54 179.47 Q246.49 143.51 266.81 117.66"/>
+  <path class="fil" d="M219.09 180.91 Q251.96 148.51 275.43 125.52"/>
+  <path class="fil" d="M220.53 182.46 Q256.76 153.83 282.88 133.82"/>
+  <path class="fil" d="M221.84 184.13 Q260.26 158.5 287.92 140.68"/>
+  <path class="fil" d="M223.02 185.89 Q262.65 162.24 290.94 145.54"/>
+  <path class="fil" d="M224.06 187.74 Q264.64 165.75 293.38 149.79"/>
+  <path class="fil" d="M224.94 189.67 Q266.82 170.16 296.4 155.74"/>
+  <path class="fil" d="M225.68 191.66 Q269.16 176.15 300.0 164.75"/>
+  <path class="fil" d="M226.25 193.7 Q271.21 183.28 303.24 175.97"/>
+  <path class="fil" d="M226.67 195.78 Q272.53 190.3 305.25 186.91"/>
+  <path class="fil" d="M226.92 197.88 Q273.07 196.09 305.96 195.33"/>
+  <path class="fil fil2" d="M223.97 201.26 L257.92 203.04"/>
+  <path class="fil fil2" d="M223.64 204.14 L257.13 209.99"/>
+  <path class="fil fil2" d="M222.97 206.96 L255.51 216.81"/>
+  <path class="fil fil2" d="M221.96 209.67 L253.08 223.38"/>
+  <path class="fil fil2" d="M220.64 212.25 L249.88 229.6"/>
+  <path class="fil fil2" d="M219.01 214.65 L245.94 235.4"/>
+  <path class="fil fil2" d="M217.11 216.83 L241.34 240.68"/>
+  <path class="fil fil2" d="M214.95 218.77 L236.14 245.37"/>
+  <path class="fil fil2" d="M212.58 220.44 L230.4 249.39"/>
+  <path class="fil fil2" d="M210.03 221.81 L224.23 252.7"/>
+  <path class="fil fil2" d="M207.32 222.86 L217.7 255.23"/>
+  <path class="fil fil2" d="M204.52 223.57 L210.91 256.96"/>
+  <path class="fil fil2" d="M201.64 223.94 L203.97 257.86"/>
+  <path class="fil fil2" d="M198.74 223.97 L196.96 257.92"/>
+  <path class="fil fil2" d="M195.86 223.64 L190.01 257.13"/>
+  <path class="fil fil2" d="M193.04 222.97 L183.19 255.51"/>
+  <path class="fil fil2" d="M190.33 221.96 L176.62 253.08"/>
+  <path class="fil fil2" d="M187.75 220.64 L170.4 249.88"/>
+  <path class="fil fil2" d="M185.35 219.01 L164.6 245.94"/>
+  <path class="fil fil2" d="M183.17 217.11 L159.32 241.34"/>
+  <path class="fil fil2" d="M181.23 214.95 L154.63 236.14"/>
+  <path class="fil fil2" d="M179.56 212.58 L150.61 230.4"/>
+  <path class="fil fil2" d="M178.19 210.03 L147.3 224.23"/>
+  <path class="fil fil2" d="M177.14 207.32 L144.77 217.7"/>
+  <path class="fil fil2" d="M176.43 204.52 L143.04 210.91"/>
+  <path class="fil fil2" d="M176.06 201.64 L142.14 203.97"/>
+  <path class="fil fil2" d="M176.03 198.74 L142.08 196.96"/>
+  <path class="fil fil2" d="M176.36 195.86 L142.87 190.01"/>
+  <path class="fil fil2" d="M177.03 193.04 L144.49 183.19"/>
+  <path class="fil fil2" d="M178.04 190.33 L146.92 176.62"/>
+  <path class="fil fil2" d="M179.36 187.75 L150.12 170.4"/>
+  <path class="fil fil2" d="M180.99 185.35 L154.06 164.6"/>
+  <path class="fil fil2" d="M182.89 183.17 L158.66 159.32"/>
+  <path class="fil fil2" d="M185.05 181.23 L163.86 154.63"/>
+  <path class="fil fil2" d="M187.42 179.56 L169.6 150.61"/>
+  <path class="fil fil2" d="M189.97 178.19 L175.77 147.3"/>
+  <path class="fil fil2" d="M192.68 177.14 L182.3 144.77"/>
+  <path class="fil fil2" d="M195.48 176.43 L189.09 143.04"/>
+  <path class="fil fil2" d="M198.36 176.06 L196.03 142.14"/>
+  <path class="fil fil2" d="M201.26 176.03 L203.04 142.08"/>
+  <path class="fil fil2" d="M204.14 176.36 L209.99 142.87"/>
+  <path class="fil fil2" d="M206.96 177.03 L216.81 144.49"/>
+  <path class="fil fil2" d="M209.67 178.04 L223.38 146.92"/>
+  <path class="fil fil2" d="M212.25 179.36 L229.6 150.12"/>
+  <path class="fil fil2" d="M214.65 180.99 L235.4 154.06"/>
+  <path class="fil fil2" d="M216.83 182.89 L240.68 158.66"/>
+  <path class="fil fil2" d="M218.77 185.05 L245.37 163.86"/>
+  <path class="fil fil2" d="M220.44 187.42 L249.39 169.6"/>
+  <path class="fil fil2" d="M221.81 189.97 L252.7 175.77"/>
+  <path class="fil fil2" d="M222.86 192.68 L255.23 182.3"/>
+  <path class="fil fil2" d="M223.57 195.48 L256.96 189.09"/>
+  <path class="fil fil2" d="M223.94 198.36 L257.86 196.03"/>
+  <circle class="disco" cx="200" cy="200" r="23"/>
+  <path class="tallo" d="M200 200 L223.51 167.64"/>
+  <ellipse class="antera" cx="227.04" cy="162.79" rx="11" ry="5.4" transform="rotate(-54.0 227.04 162.79)"/>
+  <path class="tallo" d="M200 200 L238.04 212.36"/>
+  <ellipse class="antera" cx="243.75" cy="214.21" rx="11" ry="5.4" transform="rotate(18.0 243.75 214.21)"/>
+  <path class="tallo" d="M200 200 L200.0 240.0"/>
+  <ellipse class="antera" cx="200.0" cy="246.0" rx="11" ry="5.4" transform="rotate(90.0 200.0 246.0)"/>
+  <path class="tallo" d="M200 200 L161.96 212.36"/>
+  <ellipse class="antera" cx="156.25" cy="214.21" rx="11" ry="5.4" transform="rotate(162.0 156.25 214.21)"/>
+  <path class="tallo" d="M200 200 L176.49 167.64"/>
+  <ellipse class="antera" cx="172.96" cy="162.79" rx="11" ry="5.4" transform="rotate(234.0 172.96 162.79)"/>
+  <path class="tallo" d="M200 200 Q200.0 184.0 209.0 173.0"/>
+  <circle class="estigma" cx="209.0" cy="173.0" r="5.6"/>
+  <path class="tallo" d="M200 200 Q213.86 208.0 218.88 221.29"/>
+  <circle class="estigma" cx="218.88" cy="221.29" r="5.6"/>
+  <path class="tallo" d="M200 200 Q186.14 208.0 172.12 205.71"/>
+  <circle class="estigma" cx="172.12" cy="205.71" r="5.6"/>
+  <circle class="disco2" cx="200" cy="200" r="9"/>
+</svg>

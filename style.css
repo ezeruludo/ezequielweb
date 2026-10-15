@@ -235,3 +235,219 @@ body.lb-lock{overflow:hidden}
   .index-card:hover{transform:translateY(-6px);transition:.25s}
   .essay-card:hover img{transform:scale(1.04)}
 }
+
+/* ============================================================
+   CAPA NEOBAROCA — incorporada desde lab.css (octubre 2026)
+   Moodboard en 0Web/Moodboard. La bisagra es el destello:
+   estrella CLAMP = flare de VHS = sol de las Histoires
+   prodigieuses = asterisco del hero = passiflora.
+   ============================================================ */
+/* ============================================================
+   LABORATORIO — capa neobarroca sobre style.css
+   Se carga DESPUÉS de style.css y solo la pisa. Nada destructivo.
+   ============================================================ */
+
+:root{
+  --crema-rosa:#F7E8E2;
+  --ambar:#31210F;
+  --ambar-prof:#1D1206;
+  --oro:#C9972B;
+  --lila:#C3AEDC;
+  --fluor:#FF3D86;
+  --fluor-tinta:#B8124F;   /* mismo rosa, densidad de tinta: para texto chico sobre claro */
+  --flor:url("assets/orn/passiflora.svg");
+  --display:'Yeseva One', 'Abril Fatface', var(--serif);
+}
+
+/* ---------- 1. SUSTRATO: papel + grano ---------- */
+body{
+  background-color:var(--crema-rosa);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23f)' opacity='.55'/%3E%3C/svg%3E");
+  background-repeat:repeat;
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:300;pointer-events:none;
+  mix-blend-mode:overlay;opacity:.3;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+
+/* ---------- 2. CABECERA ---------- */
+.site-header{background:rgba(247,232,226,.92);border-bottom-color:var(--ambar)}
+
+/* ---------- 3. PORTADA: destello y passiflora ---------- */
+.hero{position:relative;overflow:hidden;border-bottom-color:var(--ambar)}
+.hero::before{
+  content:"";position:absolute;right:-7vw;top:-9vh;width:46vw;height:46vw;
+  background:var(--fluor);opacity:.12;pointer-events:none;
+  -webkit-mask:var(--flor) center/contain no-repeat;mask:var(--flor) center/contain no-repeat;
+}
+.hero-tagline em{color:var(--fluor)}
+.hero-mark{color:var(--oro);width:120px!important;height:120px!important;z-index:4}
+.hero-intro a{border-bottom-color:var(--fluor)}
+.hero-intro a:hover{color:var(--fluor-tinta)}
+
+/* ---------- 4. FICHERO DE ENTRADA ---------- */
+.index-grid{border-bottom-color:var(--ambar)}
+.index-card{border-right-color:var(--ambar)}
+.index-card.green{background:var(--green);color:var(--crema-rosa)}
+.index-card.sandia{background:var(--fluor);color:var(--ambar)}
+.index-card.cream{background:var(--lila)}
+.index-card.black{background:var(--ambar);color:var(--crema-rosa)}
+
+/* ---------- 5. CARTELA DE SECCIÓN: la flor como filete ---------- */
+.section,.cv-band,.photo-section{border-bottom-color:var(--ambar)}
+.section-head,.photo-title,.cv-band>div:first-child{position:relative;padding-top:52px}
+.section-head::before,.photo-title::before,.cv-band>div:first-child::before{
+  content:"";position:absolute;top:0;left:0;width:32px;height:32px;
+  background:currentColor;opacity:.75;
+  -webkit-mask:var(--flor) center/contain no-repeat;mask:var(--flor) center/contain no-repeat;
+}
+.section-head h2,.photo-title h2,.cv-band h2{text-shadow:.022em .02em 0 rgba(255,61,134,.4)}
+.section-head span,.photo-title>span,.cv-band span{color:var(--fluor-tinta)}
+
+/* ---------- 6. 01 INVESTIGACIONES (claro) ---------- */
+#investigacion .lead{color:var(--ambar)}
+.axes li.abordaje strong{color:var(--fluor-tinta)}
+
+/* ---------- 7. 02 PUBLICACIONES (ámbar: el vuelco nocturno) ---------- */
+#publicaciones{background:var(--ambar);color:var(--crema-rosa)}
+#publicaciones .section-head h2{text-shadow:.022em .02em 0 rgba(201,151,43,.55)}
+#publicaciones .section-head span{color:var(--oro)}
+#publicaciones .pub{border-top-color:rgba(247,232,226,.3)}
+#publicaciones .pub-marca .tipo{color:rgba(247,232,226,.5)}
+#publicaciones .pub-ref{color:rgba(247,232,226,.78)}
+#publicaciones .autores{color:var(--crema-rosa)}
+#publicaciones .year{color:var(--oro)}
+#publicaciones .ir{border-color:rgba(247,232,226,.55);color:var(--crema-rosa)}
+#publicaciones .ir:hover{background:var(--oro);border-color:var(--oro);color:var(--ambar)}
+#publicaciones .archive-note{border-top-color:rgba(247,232,226,.3);color:rgba(247,232,226,.85)}
+#publicaciones .archive-note a{color:var(--oro)}
+#publicaciones .archive-note a:hover{color:var(--fluor)}
+
+/* ---------- 8. 03 FOTOGRAFÍA (negro cálido + flare) ---------- */
+.photo-section{background:var(--ambar-prof);position:relative;overflow:hidden}
+.photo-section::before{
+  content:"";position:absolute;left:-10%;top:-30%;width:70%;height:90%;
+  background:radial-gradient(closest-side,rgba(201,151,43,.5),rgba(255,61,134,.14) 55%,transparent 72%);
+  mix-blend-mode:screen;pointer-events:none;
+}
+.photo-section>*{position:relative}
+.photo-title h2{text-shadow:.022em .02em 0 rgba(201,151,43,.5)}
+.photo-title>span{color:var(--oro)}
+.essay-card span{color:var(--oro);opacity:1}
+
+/* ---------- 9. 04 NOTAS (crema + sobreimpresión riso) ---------- */
+#notas .notes-grid article{border-top-color:var(--ambar)}
+#notas .pub h3{color:var(--ambar)}
+#notas .ir{border-color:var(--ambar)}
+#notas .ir:hover{background:var(--fluor-tinta);border-color:var(--fluor-tinta);color:var(--crema-rosa)}
+
+/* ---------- 10. CV (lila: el registro Sakura) ---------- */
+.cv-band{background:var(--lila)}
+.cv-band span{color:var(--ambar)}
+.cv-list li{border-top-color:rgba(49,33,15,.4)}
+.button{border-color:var(--ambar)}
+.button:hover{background:var(--ambar);color:var(--oro)}
+
+/* ---------- 11. 06 CONTACTO (ámbar profundo) ---------- */
+footer{background:var(--ambar-prof);color:var(--crema-rosa);position:relative;overflow:hidden}
+footer::before{
+  content:"";position:absolute;right:-60px;bottom:-70px;width:280px;height:280px;
+  background:var(--oro);opacity:.14;pointer-events:none;
+  -webkit-mask:var(--flor) center/contain no-repeat;mask:var(--flor) center/contain no-repeat;
+}
+footer>*{position:relative}
+.footer-head{border-bottom-color:rgba(247,232,226,.25)}
+.footer-head span{color:var(--oro)}
+.footer-links a:hover,.footer-mail:hover{color:var(--oro)}
+
+/* ---------- 12. ENSAYOS: mosaico y lightbox ----------
+   Decisión de Ezequiel: adentro de un ensayo las fotos van limpias.
+   El virado es de la portada (vitrina); el ensayo es la obra.        */
+.plates .plate img,.lb-stage img{filter:none!important}
+.plate:focus-visible{outline-color:var(--fluor)}
+.lb{background:rgba(29,18,6,.97)}
+.lb button:hover{color:var(--oro)}
+.epigrafe{border-left-color:var(--fluor)}
+
+@media(max-width:800px){
+  .hero::before{width:70vw;height:70vw;right:-20vw}
+  .section-head,.photo-title,.cv-band>div:first-child{padding-top:42px}
+  .section-head::before,.photo-title::before,.cv-band>div:first-child::before{width:26px;height:26px}
+}
+
+
+/* ============================================================
+   13. EL 70: cartel de video + logo de shojo
+   La bisagra tipografica: el titulo de Falcon Studios y el logo de
+   Kaze to Ki no Uta comparten el mismo gesto —alto contraste,
+   contorno, y una copia desplazada en segundo color—. Cambia el
+   grado de inocencia, no la forma.
+   ============================================================ */
+.hero h1,.section-head h2,.photo-title h2,.cv-band h2,.essay-card h3,.essay-head h1,.footer-name{
+  font-family:var(--display);font-weight:400;font-style:normal}
+.hero h1{letter-spacing:-.005em;line-height:.92;
+  text-shadow:.030em .028em 0 var(--fluor), .060em .056em 0 var(--oro)}
+.section-head h2,.cv-band h2,.essay-head h1{letter-spacing:-.005em;line-height:.9;
+  text-shadow:.026em .024em 0 var(--fluor), .052em .048em 0 var(--oro)}
+#publicaciones .section-head h2,.photo-title h2{
+  text-shadow:.026em .024em 0 var(--oro), .052em .048em 0 var(--fluor)}
+.hero-tagline{font-family:var(--serif)}
+.footer-name{font-size:42px;line-height:.9;letter-spacing:0}
+
+/* ---- 14. HALACION Y DEGRADADO DE CINTA ---- */
+/* La cinta se limpia al pasar por encima: cae el virado Y caen las dos
+   capas de halación. Un filtro que no se puede sacar no es un virado,
+   es censura. Toca la foto y la ves como es. */
+.hero-portrait{position:relative;isolation:isolate}
+.hero-portrait img{transition:filter .45s ease}
+.hero-portrait::after,.hero-portrait::before{content:"";position:absolute;left:0;right:0;top:0;bottom:34px;
+  pointer-events:none;mix-blend-mode:screen;transition:opacity .45s ease}
+.hero-portrait::after{
+  background:radial-gradient(ellipse at 50% 32%,rgba(255,206,138,.42),rgba(255,206,138,.1) 45%,transparent 68%)}
+.hero-portrait::before{z-index:2;--halo:.55;opacity:.55;
+  background:linear-gradient(90deg,rgba(255,0,120,.5),transparent 9%,transparent 91%,rgba(0,170,255,.45))}
+.hero-portrait:hover img,.hero-portrait:focus-within img{filter:none}
+.hero-portrait:hover::after,.hero-portrait:hover::before,
+.hero-portrait:focus-within::after,.hero-portrait:focus-within::before{opacity:0}
+
+.essay-card figure{position:relative;isolation:isolate}
+.essay-card img{transition:filter .45s ease,transform .5s}
+.essay-card figure::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;
+  transition:opacity .45s ease;
+  background:radial-gradient(ellipse at 50% 30%,rgba(255,198,120,.34),transparent 62%)}
+.essay-card:hover img,.essay-card:focus-within img{filter:none}
+.essay-card:hover figure::after,.essay-card:focus-within figure::after{opacity:0}
+
+/* ---- 15. ENCUADRE DE ESCENA ---- */
+.essay-card figure{border-top:9px solid #0B0703;border-bottom:9px solid #0B0703}
+.essays{counter-reset:bobina}
+.essay-card{counter-increment:bobina}
+.essay-card span::before{content:"BOB. " counter(bobina,decimal-leading-zero) "  \00B7  "}
+.photo-section::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;
+  background:repeating-linear-gradient(to bottom,rgba(0,0,0,.6) 0 1px,transparent 1px 3px)}
+.lb-stage{border-top:26px solid #0B0703;border-bottom:26px solid #0B0703}
+.lb-bar{font-family:var(--mono);letter-spacing:.12em}
+
+/* En pantallas tactiles no hay hover: si viraramos las fotos ahi, no habria
+   manera de limpiarlas. Asi que el virado y la halacion existen solo donde
+   el puntero puede sacarlos. En celular las fotos salen limpias. */
+@media (hover:hover) and (pointer:fine){
+  .hero-portrait img{filter:contrast(1.2) saturate(.7) sepia(.2) brightness(1.07)}
+  .essay-card img{filter:contrast(1.22) saturate(.62) sepia(.26) brightness(1.05)}
+  .hero-portrait::after,.hero-portrait::before,.essay-card figure::after{opacity:var(--halo,1)}
+}
+@media (hover:none),(pointer:coarse){
+  .hero-portrait::after,.hero-portrait::before,.essay-card figure::after{display:none}
+}
+
+/* La portada de cada ensayo lleva la misma cartela que las secciones */
+.essay-head{position:relative}
+.essay-head .back-link{margin-left:46px}
+.essay-head::before{content:"";position:absolute;left:7vw;top:12vh;width:32px;height:32px;
+  background:currentColor;opacity:.75;
+  -webkit-mask:var(--flor) center/contain no-repeat;mask:var(--flor) center/contain no-repeat}
+@media(max-width:800px){
+  .essay-head::before{left:20px;top:70px;width:26px;height:26px}
+  .essay-head .back-link{margin-left:38px}
+}
