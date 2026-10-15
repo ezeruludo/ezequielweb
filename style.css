@@ -503,15 +503,21 @@ footer>*{position:relative}
    abierta ocupa la fila entera y da el texto. Sin JS, operable con
    teclado, y el texto completo esta siempre en el HTML.
    ============================================================ */
+.mazo-rotulo{margin:40px 0 0;display:flex;align-items:center;gap:16px;
+  font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fluor-tinta)}
+.mazo-rotulo::after{content:"";flex:1;height:1px;background:rgba(49,33,15,.3)}
 .mazo-pie{margin:26px 0 0;font:11px var(--mono);letter-spacing:.06em;text-transform:uppercase;
   color:rgba(28,27,26,.55)}
-.cartas{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:18px}
+.cartas{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
 
 .carta{background:var(--acento);color:var(--crema-rosa);position:relative;
   border:1px solid rgba(243,236,220,.3);box-shadow:3px 3px 0 rgba(28,27,26,.18);
   transition:box-shadow .3s ease,transform .3s ease}
 .carta:hover{box-shadow:5px 5px 0 var(--fluor);transform:translate(-1px,-1px)}
 .carta[open]{grid-column:1/-1;box-shadow:5px 5px 0 var(--oro)}
+
+.cartas.equipo .carta{border-color:rgba(201,151,43,.45)}
+.cartas.equipo .carta-cartela{font-size:21px}
 .carta>summary{list-style:none;cursor:pointer;display:grid;justify-items:center;text-align:center;
   gap:15px;padding:30px 20px 24px}
 .carta>summary::-webkit-details-marker{display:none}
@@ -526,22 +532,23 @@ footer>*{position:relative}
   transition:width .3s ease,height .3s ease}
 .carta-cartela{display:block;font-family:var(--display);font-weight:400;font-size:23px;line-height:1;
   letter-spacing:.015em;text-shadow:.03em .028em 0 var(--fluor)}
-.carta-pico{display:block;margin-top:9px;font-size:13px;line-height:1.42;opacity:.82;max-width:34ch}
-.carta-meta{margin:0 0 14px;font:11px var(--mono);letter-spacing:.05em;text-transform:uppercase;
-  color:var(--oro)}
+.carta-pico{display:block;margin-top:10px;font:400 14px/1.4 var(--serif);opacity:.92;max-width:36ch}
+.carta-firma{display:block;margin-top:11px;padding-top:10px;border-top:1px solid currentColor;
+  font:11px/1.45 var(--mono);letter-spacing:.03em;color:var(--oro);opacity:.95;max-width:40ch}
 .carta-dorso{padding:0 26px 28px;max-width:72ch}
 .carta-dorso p{margin:0 0 15px;font-size:15px;line-height:1.56}
 .carta-dorso p:last-child{margin-bottom:0}
-.carta-dorso b{font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.25;display:block;
-  margin-bottom:4px}
+.carta-dorso b{font-weight:600}
 .carta-dorso em{font-style:italic}
 
 .carta[open]>summary{grid-template-columns:76px 1fr;justify-items:start;text-align:left;
   gap:22px;align-items:center;padding:24px 26px 18px}
 .carta[open] .carta-emblema{width:76px;height:76px}
 .carta[open] .carta-cartela{font-size:30px}
-.carta[open] .carta-pico{opacity:.7}
+.carta[open] .carta-pico{font-size:17px;max-width:60ch}
+.carta[open] .carta-firma{max-width:60ch}
 
+@media(max-width:900px){.cartas{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){
   .cartas{grid-template-columns:1fr 1fr;gap:12px}
   .carta>summary{padding:22px 13px 18px;gap:11px}
