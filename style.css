@@ -503,6 +503,12 @@ footer>*{position:relative}
    abierta ocupa la fila entera y da el texto. Sin JS, operable con
    teclado, y el texto completo esta siempre en el HTML.
    ============================================================ */
+/* Investigaciones ya no es .split: el titulo arriba y el mazo a lo ancho,
+   como Publicaciones y Notas. En dos columnas las cartas quedaban como
+   tiras verticales de 150 px. */
+#investigacion .section-body{max-width:none}
+#investigacion .lead{max-width:780px}
+#investigacion .kicker,#investigacion .mazo-pie{max-width:780px}
 .mazo-rotulo{margin:40px 0 0;display:flex;align-items:center;gap:16px;
   font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fluor-tinta)}
 .mazo-rotulo::after{content:"";flex:1;height:1px;background:rgba(49,33,15,.3)}
@@ -539,6 +545,10 @@ footer>*{position:relative}
 .carta-dorso p{margin:0 0 15px;font-size:15px;line-height:1.56}
 .carta-dorso p:last-child{margin-bottom:0}
 .carta-dorso b{font-weight:600}
+.carta-accion{margin:4px 0 0!important}
+.carta-dorso .ir{display:inline-block;border:1px solid currentColor;color:inherit;
+  padding:8px 13px;font:700 11px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.carta-dorso .ir:hover{background:var(--crema-rosa);color:var(--acento);border-color:var(--crema-rosa)}
 .carta-dorso em{font-style:italic}
 
 .carta[open]>summary{grid-template-columns:76px 1fr;justify-items:start;text-align:left;
@@ -598,3 +608,57 @@ footer>*{position:relative}
   .nota-cuerpo{padding:18px 18px 20px}
   .nota h3{font-size:22px}
 }
+
+/* ============================================================
+   CELULAR: que nada se salga de la pantalla
+   El texto se vefa cortado a la derecha y la pagina se podia correr
+   de costado. Dos causas: los hijos de un grid traen min-width:auto,
+   asi que cualquier palabra larga ensancha la columna mas alla del
+   contenedor; y varios ornamentos absolutos se apoyan fuera del borde.
+   ============================================================ */
+html{overflow-x:clip}
+body{overflow-x:clip;overflow-wrap:break-word}
+
+/* min-width:0 en todo hijo de grid: sin esto la columna crece con la
+   palabra mas larga en vez de dejarla cortar */
+.split>*,.cv-band>*,.hero>*,footer>*,.section-body,.pub-body,.placa,
+.placa-faja,.placa-pie,.nota,.nota-cuerpo,.carta,.carta-texto,
+.index-card,.essay-card,.notes-grid>*{min-width:0}
+
+@media(max-width:800px){
+  .section,.photo-section{padding-left:22px;padding-right:22px}
+  .cv-band{padding-left:22px;padding-right:22px}
+  .hero{padding-left:22px;padding-right:22px}
+  .essay-head{padding-left:22px;padding-right:22px}
+  .plates{padding-left:22px;padding-right:22px}
+  .essay-nav{padding-left:22px;padding-right:22px}
+  footer{padding-left:22px;padding-right:22px}
+  .site-header{padding-left:22px;padding-right:22px}
+  .nav{padding-left:22px;padding-right:22px}
+  /* titulos enormes: que corten antes de empujar la caja */
+  .hero h1,.section-head h2,.photo-title h2,.cv-band h2,.essay-head h1{
+    overflow-wrap:anywhere;hyphens:auto}
+  .lead,.project h3,.placa h3,.nota h3,.carta-cartela{overflow-wrap:anywhere}
+  /* la referencia de las placas y las notas traen nombres de revista larguisimos */
+  .placa-ref,.nota-medio,.nota-texto,.pub-ref,.carta-firma{overflow-wrap:anywhere}
+}
+/* El culpable mas probable del scroll lateral: "INVESTIGACIONES" y
+   "ENSAYOS FOTOGRAFICOS" son palabras de 15 y 20 caracteres dentro de
+   una grilla de dos columnas. Como los hijos de un grid traen
+   min-width:auto, la columna crecia hasta la palabra entera (~270 px)
+   y empujaba toda la pagina ~160 px a la derecha. */
+.index-card strong{overflow-wrap:anywhere}
+@media(max-width:520px){
+  .index-grid{grid-template-columns:1fr}
+  .index-card{min-height:150px;border-right:0;border-bottom:1px solid var(--ambar)}
+  .index-card:last-child{border-bottom:0}
+  .cartas{grid-template-columns:1fr}
+  .essays{grid-template-columns:1fr}
+  .plates{grid-template-columns:1fr}
+}
+
+/* Anclas de lectura en la prosa larga: media negrita sobre un resaltador
+   fluor muy bajo. Le da al ojo donde agarrarse sin romper el parrafo. */
+.section-body p b{font-weight:600;
+  box-shadow:inset 0 -.3em 0 rgba(255,61,134,.18);
+  padding:0 .06em}
