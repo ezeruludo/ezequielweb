@@ -1,7 +1,7 @@
 :root{
   --green:#0F4A3C;
   --sandia:#EE6477;
-  --cream:#F3ECDC;
+  --cream:#F7E8E2;
   --black:#1C1B1A;
   --violet:#765BA7;
   --max:1440px;
@@ -14,7 +14,7 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--cream);color:var(--black);font-family:var(--sans);font-size:16px;line-height:1.45}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
-.site-header{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:repeat(6,1fr);gap:20px;padding:18px 28px;background:rgba(243,238,220,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--black)}
+.site-header{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:repeat(6,1fr);gap:20px;padding:18px 28px;background:rgba(247,232,226,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--black)}
 .wordmark{grid-column:1/2;font:700 16px/0.92 var(--sans);letter-spacing:.04em}
 .nav{grid-column:2/7;display:flex;justify-content:space-between;align-items:center;font:500 13px var(--mono);text-transform:uppercase}
 .nav a{border-bottom:1px solid transparent}
@@ -103,9 +103,9 @@ a{color:inherit;text-decoration:none}
 
 footer{display:grid;grid-template-columns:2fr 2fr 1fr;gap:30px;padding:55px 7vw;background:var(--black);color:var(--cream)}
 #contacto{scroll-margin-top:72px}
-.footer-head{grid-column:1/-1;display:flex;align-items:baseline;gap:28px;padding-bottom:26px;border-bottom:1px solid rgba(243,236,220,.22)}
+.footer-head{grid-column:1/-1;display:flex;align-items:baseline;gap:28px;padding-bottom:26px;border-bottom:1px solid rgba(247,232,226,.22)}
 .footer-head span,.footer-head h2{margin:0;font:11px var(--mono);letter-spacing:.04em;text-transform:uppercase}
-.footer-head span{color:rgba(243,236,220,.55)}
+.footer-head span{color:rgba(247,232,226,.55)}
 .footer-name{font:500 50px/.75 var(--serif)}
 .footer-mail{margin-top:6px;font-size:12px;letter-spacing:.01em;overflow-wrap:anywhere}
 .footer-mail svg{flex:none}
@@ -131,7 +131,7 @@ footer{display:grid;grid-template-columns:2fr 2fr 1fr;gap:30px;padding:55px 7vw;
 .lb.open{display:block}
 .lb-stage{position:absolute;inset:56px 64px 64px;display:flex;align-items:center;justify-content:center}
 .lb-stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;cursor:zoom-out}
-.lb-bar{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:18px;padding:22px 24px;font:11px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:rgba(243,238,220,.7);pointer-events:none}
+.lb-bar{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:18px;padding:22px 24px;font:11px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:rgba(247,232,226,.7);pointer-events:none}
 .lb button{background:none;border:0;color:var(--cream);font:700 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;padding:10px 14px}
 .lb button:hover{color:var(--sandia)}
 .lb-close{position:absolute;top:10px;right:14px}
@@ -252,9 +252,9 @@ body.lb-lock{overflow:hidden}
   --ambar:#31210F;
   --ambar-prof:#1D1206;
   --oro:#C9972B;
-  --lila:#C3AEDC;
-  --fluor:#FF3D86;
-  --fluor-tinta:#B8124F;   /* mismo rosa, densidad de tinta: para texto chico sobre claro */
+  --lila:#B3A0B5;
+  --fluor:#EE6477;      /* sandía: reemplazó al flúo #FF3D86 el 15/10/2026 */
+  --fluor-tinta:#B42236;   /* mismo rosa, densidad de tinta: para texto chico sobre claro */
   --flor:url("assets/orn/passiflora.svg");
   --display:'Yeseva One', 'Abril Fatface', var(--serif);
 }
@@ -302,7 +302,7 @@ body::after{
   background:currentColor;opacity:.75;
   -webkit-mask:var(--flor) center/contain no-repeat;mask:var(--flor) center/contain no-repeat;
 }
-.section-head h2,.photo-title h2,.cv-band h2{text-shadow:.022em .02em 0 rgba(255,61,134,.4)}
+.section-head h2,.photo-title h2,.cv-band h2{text-shadow:.022em .02em 0 rgba(238,100,119,.4)}
 .section-head span,.photo-title>span,.cv-band span{color:var(--fluor-tinta)}
 
 /* ---------- 6. 01 INVESTIGACIONES (claro) ---------- */
@@ -328,7 +328,7 @@ body::after{
 .photo-section{background:var(--ambar-prof);position:relative;overflow:hidden}
 .photo-section::before{
   content:"";position:absolute;left:-10%;top:-30%;width:70%;height:90%;
-  background:radial-gradient(closest-side,rgba(201,151,43,.5),rgba(255,61,134,.14) 55%,transparent 72%);
+  background:radial-gradient(closest-side,rgba(201,151,43,.5),rgba(238,100,119,.14) 55%,transparent 72%);
   mix-blend-mode:screen;pointer-events:none;
 }
 .photo-section>*{position:relative}
@@ -517,7 +517,7 @@ footer>*{position:relative}
 .cartas{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
 
 .carta{background:var(--acento);color:var(--tinta,var(--crema-rosa));position:relative;
-  border:1px solid rgba(243,236,220,.3);box-shadow:3px 3px 0 rgba(28,27,26,.18);
+  border:1px solid rgba(247,232,226,.3);box-shadow:3px 3px 0 rgba(28,27,26,.18);
   transition:box-shadow .3s ease,transform .3s ease}
 .carta:hover{box-shadow:5px 5px 0 var(--fluor);transform:translate(-1px,-1px)}
 .carta[open]{grid-column:1/-1;box-shadow:5px 5px 0 var(--oro)}
@@ -536,8 +536,8 @@ footer>*{position:relative}
 .carta-emblema{width:94px;height:94px;background:currentColor;flex:none;
   -webkit-mask:var(--emb) center/contain no-repeat;mask:var(--emb) center/contain no-repeat;
   transition:width .3s ease,height .3s ease}
-.carta-cartela{display:block;font-family:var(--display);font-weight:400;font-size:23px;line-height:1;
-  letter-spacing:.015em;text-shadow:.03em .028em 0 var(--fluor)}
+.carta-cartela{display:block;font-family:var(--serif);font-weight:500;font-size:26px;line-height:1;
+  letter-spacing:-.005em;text-shadow:.03em .028em 0 var(--fluor)}
 .carta-pico{display:block;margin-top:10px;font:400 14px/1.4 var(--serif);opacity:.92;max-width:36ch}
 .carta-firma{display:block;margin-top:11px;padding-top:10px;border-top:1px solid currentColor;
   font:11px/1.45 var(--mono);letter-spacing:.03em;color:var(--firma,var(--oro));opacity:.95;max-width:40ch}
@@ -589,7 +589,7 @@ footer>*{position:relative}
   background:currentColor;opacity:.13;pointer-events:none;
   -webkit-mask:var(--flor) center/contain no-repeat;mask:var(--flor) center/contain no-repeat}
 .nota-sello img{width:100%;height:100%;object-fit:contain;max-height:150px}
-.sello-texto{font-family:var(--display);font-weight:400;font-size:21px;line-height:1.08;
+.sello-texto{font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.05;
   text-shadow:.03em .028em 0 var(--fluor);position:relative}
 .nota-cuerpo{padding:20px 24px 22px;min-width:0}
 .nota-meta{margin:0 0 7px;font:11px var(--mono);letter-spacing:.06em;text-transform:uppercase;
@@ -617,7 +617,14 @@ footer>*{position:relative}
    contenedor; y varios ornamentos absolutos se apoyan fuera del borde.
    ============================================================ */
 html{overflow-x:clip}
-body{overflow-x:clip;overflow-wrap:break-word}
+body{overflow-x:clip}
+/* El corte de palabras va solo en celular: en escritorio partía
+   "Trayectoria" en "Trayector / ia". */
+@media(max-width:800px){body{overflow-wrap:break-word}}
+/* Sin el corte, "Trayectoria" en Yeseva no entra en su columna: se ajusta
+   el tamaño al ancho de la columna en vez de partir la palabra. */
+@media(min-width:801px){.cv-band h2{font-size:clamp(48px,6.3vw,100px)}}
+@media(min-width:801px) and (max-width:960px){.essay-card h3{font-size:clamp(21px,2.6vw,25px)}}
 
 /* min-width:0 en todo hijo de grid: sin esto la columna crece con la
    palabra mas larga en vez de dejarla cortar */
@@ -662,7 +669,7 @@ body{overflow-x:clip;overflow-wrap:break-word}
 /* Anclas de lectura: resaltador sobre la palabra entera y NADA de negrita.
    Las dos cosas juntas pesaban demasiado. Los links de la prosa llevan su
    subrayado fluor y no van resaltados: dos señales distintas, una por cosa. */
-.section-body p mark{background:rgba(255,61,134,.2);color:inherit;
+.section-body p mark{background:rgba(238,100,119,.2);color:inherit;
   padding:.08em .12em;border-radius:1px;box-decoration-break:clone;
   -webkit-box-decoration-break:clone}
 
