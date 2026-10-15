@@ -492,3 +492,102 @@ footer>*{position:relative}
   .placas{grid-template-columns:1fr;gap:20px}
   .placa h3{font-size:22px}
 }
+
+/* ============================================================
+   EL MAZO — Investigaciones y Sobre mi como cartas
+   En Card Captor la carta es un marco ornamental con un emblema al
+   centro y una cartela con el nombre abajo. En el porno de los 70 el
+   equivalente exacto es la lobby card: un fotograma enmarcado con su
+   placa de titulo. Mismo objeto, dos grados de inocencia.
+   Cada carta es un <details>: cerrada muestra emblema, nombre y pico;
+   abierta ocupa la fila entera y da el texto. Sin JS, operable con
+   teclado, y el texto completo esta siempre en el HTML.
+   ============================================================ */
+.mazo-pie{margin:26px 0 0;font:11px var(--mono);letter-spacing:.06em;text-transform:uppercase;
+  color:rgba(28,27,26,.55)}
+.cartas{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:18px}
+
+.carta{background:var(--acento);color:var(--crema-rosa);position:relative;
+  border:1px solid rgba(243,236,220,.3);box-shadow:3px 3px 0 rgba(28,27,26,.18);
+  transition:box-shadow .3s ease,transform .3s ease}
+.carta:hover{box-shadow:5px 5px 0 var(--fluor);transform:translate(-1px,-1px)}
+.carta[open]{grid-column:1/-1;box-shadow:5px 5px 0 var(--oro)}
+.carta>summary{list-style:none;cursor:pointer;display:grid;justify-items:center;text-align:center;
+  gap:15px;padding:30px 20px 24px}
+.carta>summary::-webkit-details-marker{display:none}
+.carta>summary:focus-visible{outline:2px solid var(--fluor);outline-offset:3px}
+/* filete doble, al modo de las laminas del libro de prodigios */
+.carta>summary::before{content:"";position:absolute;inset:7px;pointer-events:none;
+  border:1px solid currentColor;opacity:.4}
+.carta>summary::after{content:"";position:absolute;inset:11px;pointer-events:none;
+  border:1px solid currentColor;opacity:.18}
+.carta-emblema{width:94px;height:94px;background:currentColor;flex:none;
+  -webkit-mask:var(--emb) center/contain no-repeat;mask:var(--emb) center/contain no-repeat;
+  transition:width .3s ease,height .3s ease}
+.carta-cartela{display:block;font-family:var(--display);font-weight:400;font-size:23px;line-height:1;
+  letter-spacing:.015em;text-shadow:.03em .028em 0 var(--fluor)}
+.carta-pico{display:block;margin-top:9px;font-size:13px;line-height:1.42;opacity:.82;max-width:34ch}
+.carta-meta{margin:0 0 14px;font:11px var(--mono);letter-spacing:.05em;text-transform:uppercase;
+  color:var(--oro)}
+.carta-dorso{padding:0 26px 28px;max-width:72ch}
+.carta-dorso p{margin:0 0 15px;font-size:15px;line-height:1.56}
+.carta-dorso p:last-child{margin-bottom:0}
+.carta-dorso b{font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.25;display:block;
+  margin-bottom:4px}
+.carta-dorso em{font-style:italic}
+
+.carta[open]>summary{grid-template-columns:76px 1fr;justify-items:start;text-align:left;
+  gap:22px;align-items:center;padding:24px 26px 18px}
+.carta[open] .carta-emblema{width:76px;height:76px}
+.carta[open] .carta-cartela{font-size:30px}
+.carta[open] .carta-pico{opacity:.7}
+
+@media(max-width:620px){
+  .cartas{grid-template-columns:1fr 1fr;gap:12px}
+  .carta>summary{padding:22px 13px 18px;gap:11px}
+  .carta-emblema{width:66px;height:66px}
+  .carta-cartela{font-size:18px}
+  .carta-pico{font-size:12px}
+  .carta[open]>summary{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .carta-dorso{padding:0 18px 22px}
+}
+@media(prefers-reduced-motion:reduce){
+  .carta,.carta-emblema{transition:none}
+}
+
+/* ============================================================
+   NOTAS — fichas horizontales con sello a la izquierda
+   Formato apaisado a proposito: Publicaciones y Fotografia ya son
+   verticales. El sello es el logo del medio si existe el archivo en
+   assets/notas/, y si no un sello tipografico con la paleta del sitio.
+   ============================================================ */
+.notas{margin-top:34px;display:grid;gap:18px}
+.nota{display:grid;grid-template-columns:184px 1fr;align-items:stretch;
+  border:1px solid var(--ambar);background:rgba(49,33,15,.045)}
+.nota-sello{background:var(--acento);color:var(--crema-rosa);display:grid;place-items:center;
+  padding:22px 16px;text-align:center;position:relative;overflow:hidden}
+.nota-sello::before{content:"";position:absolute;inset:7px;border:1px solid currentColor;opacity:.35;
+  pointer-events:none}
+.nota-sello::after{content:"";position:absolute;right:-26px;bottom:-30px;width:110px;height:110px;
+  background:currentColor;opacity:.13;pointer-events:none;
+  -webkit-mask:var(--flor) center/contain no-repeat;mask:var(--flor) center/contain no-repeat}
+.nota-sello img{width:100%;height:100%;object-fit:contain;max-height:150px}
+.sello-texto{font-family:var(--display);font-weight:400;font-size:21px;line-height:1.08;
+  text-shadow:.03em .028em 0 var(--fluor);position:relative}
+.nota-cuerpo{padding:20px 24px 22px;min-width:0}
+.nota-meta{margin:0 0 7px;font:11px var(--mono);letter-spacing:.06em;text-transform:uppercase;
+  color:rgba(28,27,26,.6)}
+.nota-meta b{color:var(--fluor-tinta);font-weight:700}
+.nota h3{font-family:var(--serif);font-weight:500;font-size:25px;line-height:1.14;margin:0 0 7px;
+  text-wrap:balance}
+.nota-medio{margin:0 0 11px;font-size:13px;font-weight:500}
+.nota-texto{margin:0 0 15px;font-size:14px;line-height:1.52;color:rgba(28,27,26,.82);max-width:70ch}
+.nota-accion{margin:0}
+.nota .ir{border-color:var(--ambar);padding:8px 13px}
+.nota .ir:hover{background:var(--acento);border-color:var(--acento);color:var(--crema-rosa)}
+@media(max-width:620px){
+  .nota{grid-template-columns:1fr}
+  .nota-sello{padding:26px 16px}
+  .nota-cuerpo{padding:18px 18px 20px}
+  .nota h3{font-size:22px}
+}
