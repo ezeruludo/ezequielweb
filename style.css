@@ -713,3 +713,24 @@ body{overflow-x:clip}
     background:linear-gradient(to bottom,rgba(0,0,0,.6) 1px,transparent 1px) 0 0/100% 3px repeat}
   .photo-section>*{z-index:1}
 }
+
+/* ============================================================
+   CARTAS DEL MISMO ALTO (16/10/2026)
+   Critica de Mati: las seis cartas tenian alturas distintas porque el
+   texto varia. Ahora miden lo mismo: las dos hileras toman el alto de la
+   carta mas alta (--alto-carta, que calcula un script minimo al pie de la
+   portada; sin JS cada hilera iguala solo su propia fila). Adentro, el
+   nombre y la bajada quedan arriba y la firma baja al pie, asi las lineas
+   de direccion quedan alineadas. En una sola columna (celular angosto)
+   no se iguala: solo agregaria aire vacio.
+   ============================================================ */
+.cartas{align-items:stretch}
+.carta:not([open]){min-height:var(--alto-carta,0)}
+.carta:not([open])>summary{height:100%;box-sizing:border-box;grid-template-rows:auto 1fr}
+.carta:not([open]) .carta-texto{display:flex;flex-direction:column;align-items:center}
+.carta:not([open]) .carta-firma{margin-top:auto}
+.carta:not([open]) .carta-pico{margin-bottom:14px}
+@media(max-width:520px){.carta:not([open]){min-height:0}}
+/* El rotulo "En equipo" quedaba pegado a la hilera de arriba: la regla
+   .section-body p{margin:0 0 22px} le pisaba el margin-top de 40px. */
+.section-body .mazo-rotulo{margin:40px 0 0}
