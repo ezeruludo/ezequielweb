@@ -676,3 +676,40 @@ body{overflow-x:clip}
 /* Links dentro de la prosa de Sobre mi */
 .section-body p a{border-bottom:1px solid var(--fluor);padding-bottom:1px}
 .section-body p a:hover{color:var(--fluor-tinta);border-bottom-color:var(--fluor-tinta)}
+
+/* ============================================================
+   CELULAR: TITULOS, CARTAS Y LINEAS DE VIDEO (16/10/2026)
+   ============================================================ */
+/* Titulos: en vez de partir la palabra con guion ("Investigacio- / nes"),
+   el cuerpo se ajusta al ancho de pantalla. El divisor es el ancho de la
+   palabra mas larga de cada titulo en Yeseva One, en em, con margen para
+   la sombra desplazada: Investigaciones 7.96, fotográficos 6.26,
+   Trayectoria 5.91, Stormtrooper 6.98. 44px = el padding lateral (22+22).
+   Arriba de ~420 px manda el tamaño de siempre. */
+@media(max-width:800px){
+  .hero h1,.section-head h2,.photo-title h2,.cv-band h2,.essay-head h1{hyphens:manual}
+  .section-head h2{font-size:min(48px,calc((100vw - 44px) / 8.5))}
+  .photo-title h2{font-size:min(56px,calc((100vw - 44px) / 6.8))}
+  .cv-band h2{font-size:min(60px,calc((100vw - 44px) / 6.4))}
+  .essay-head h1{font-size:min(62px,calc((100vw - 44px) / 7.5))}
+}
+
+/* Cartas: el pico (36ch de Cormorant) es mas angosto que la firma (40ch de
+   mono), y un bloque con max-width se apoya a la izquierda de su caja.
+   Resultado: la bajada se veia corrida hacia la izquierda. Se centran las
+   dos cajas; abierta en escritorio la carta vuelve a alinear a la izquierda. */
+.carta-pico,.carta-firma{margin-left:auto;margin-right:auto}
+@media(min-width:621px){
+  .carta[open] .carta-pico,.carta[open] .carta-firma{margin-left:0;margin-right:0}
+}
+
+/* Lineas de video en Ensayos fotograficos: en escritorio quedan como
+   estan. En celular iban por encima de todo y, reescaladas por la pantalla
+   retina, se veian como franjas gruesas e irregulares sobre las fotos.
+   Aca pasan al fondo (debajo del titulo y de las fotos, que en tactil van
+   limpias) y se dibujan con un patron de 3 px fijo, que no se deforma. */
+@media(max-width:800px),(hover:none),(pointer:coarse){
+  .photo-section::after{z-index:0;opacity:.18;
+    background:linear-gradient(to bottom,rgba(0,0,0,.6) 1px,transparent 1px) 0 0/100% 3px repeat}
+  .photo-section>*{z-index:1}
+}
