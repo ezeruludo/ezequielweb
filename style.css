@@ -734,3 +734,10 @@ body{overflow-x:clip}
 /* El rotulo "En equipo" quedaba pegado a la hilera de arriba: la regla
    .section-body p{margin:0 0 22px} le pisaba el margin-top de 40px. */
 .section-body .mazo-rotulo{margin:40px 0 0}
+
+/* La firma del epigrafe es un <footer> dentro del <blockquote> y heredaba
+   todo el estilo del pie del sitio (fondo oscuro, grilla, padding, la
+   flor): debajo de cada epigrafe aparecia una franja oscura. Pasaba en
+   todos los ensayos con epigrafe. Se anula aca (16/10/2026). */
+.epigrafe footer{display:block;background:none;color:inherit;padding:0;overflow:visible;position:static}
+.epigrafe footer::before{content:none}
