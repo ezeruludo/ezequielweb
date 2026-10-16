@@ -741,3 +741,14 @@ body{overflow-x:clip}
    todos los ensayos con epigrafe. Se anula aca (16/10/2026). */
 .epigrafe footer{display:block;background:none;color:inherit;padding:0;overflow:visible;position:static}
 .epigrafe footer::before{content:none}
+
+/* Menu desplegable en celular (16/10/2026): aparecia corrido a la derecha
+   y cortado a la mitad. La .nav hereda de escritorio grid-column:2/7, y un
+   hijo con position:absolute de una grilla toma como caja de referencia su
+   area de grilla, no el header entero: el panel arrancaba en la columna del
+   boton MENU. Con grid-column:auto vuelve a medir todo el ancho del header.
+   De paso, el boton MENU salia azul en iOS (color por defecto de <button>). */
+@media(max-width:800px){
+  .nav{grid-column:auto;left:0;right:0;width:auto}
+  .menu-toggle{color:inherit;-webkit-appearance:none;appearance:none;padding:6px 0;cursor:pointer}
+}
