@@ -39,7 +39,8 @@
 .obra-sec>span{font:11px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--fluor-tinta)}
 .bio{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start}
 .bio p{margin:0 0 18px;font-size:16px;line-height:1.55}
-.statement p{font:400 22px/1.4 var(--serif)}
+.statement p{font:400 19px/1.45 var(--serif);margin:0 0 16px}
+.statement-tit{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fluor-tinta);margin:0 0 12px}
 .completar{background:rgba(238,100,119,.18);padding:0 .2em;font-style:normal}
 .serie{display:grid;grid-template-columns:260px 1fr;gap:36px;padding:34px 0;border-top:1px solid var(--ambar)}
 .serie:first-of-type{border-top:0;padding-top:0}
@@ -57,7 +58,9 @@
 .cva ul{list-style:none;margin:0;padding:0}
 .cva li{display:grid;grid-template-columns:86px 1fr;gap:12px;padding:8px 0;border-top:1px solid rgba(28,27,26,.18);font-size:14px;line-height:1.45}
 .cva li b{font:11px var(--mono);font-weight:400;padding-top:2px}
-.pdf{margin-top:30px}
+.pdf{margin-top:30px;display:flex;gap:28px;flex-wrap:wrap}
+.imprimir{background:none;border:0;border-bottom:1px solid currentColor;padding:0;cursor:pointer;color:inherit}
+.cv-id{margin:-14px 0 18px;font-size:15px;max-width:none}
 @media(max-width:800px){
   .obra-head,.obra-sec{padding-left:22px;padding-right:22px}
   .bio,.cva{grid-template-columns:1fr}
@@ -89,7 +92,19 @@
   .tira figure{flex-basis:auto!important}
   .obra-sec>h2{margin:2mm 0 6mm}
   .serie h3{font-size:24px}
-  .statement p{font-size:16px}
+  .statement p{font-size:12.5px;line-height:1.4;margin:0 0 3mm}
+  .bio p{font-size:11.5px;line-height:1.45;margin:0 0 3mm}
+  /* CV en una pagina: solo la seccion 03, compacta */
+  body.solo-cv .obra-head,body.solo-cv #bio,body.solo-cv #series{display:none!important}
+  body.solo-cv #cv-artistico{break-before:auto}
+  /* El CV va compacto siempre, para que entre en una sola carilla
+     tambien dentro del portfolio completo */
+  #cv-artistico>h2{font-size:30px;margin:0 0 3mm}
+  #cv-artistico .cv-id{margin:0 0 4mm;font-size:11px}
+  #cv-artistico .cva h3{margin:4mm 0 1.5mm;font-size:9px}
+  #cv-artistico .cva li{font-size:9.5px;padding:1.3mm 0;grid-template-columns:14mm 1fr;gap:3mm}
+  #cv-artistico .cva li b{font-size:8.5px}
+  #cv-artistico .cva{break-inside:avoid}
 }
 </style>
 </head>
@@ -119,13 +134,17 @@
     <span>01</span><h2>Bio</h2>
     <div class="bio">
       <div>
-        <p><b>Ezequiel Aguilera</b> (Lechería, Venezuela, <span class="completar">año</span>) es fotógrafo y antropólogo. Vive y trabaja en Buenos Aires.</p>
-        <p><span class="completar">Párrafo personal: por qué empezaste a fotografiar, qué experiencia o taller te marcó, de dónde viene el interés por el cuerpo y la pornografía. Dos o tres líneas.</span></p>
-        <p>Es licenciado en Antropología por la Universidad Nacional de Córdoba (2021) y doctorando en Ciencias Antropológicas en la misma universidad, con beca de CONICET. Se formó en lenguaje audiovisual (ENERC, 2020), guion y dirección para cine (2020), producción audiovisual (APIMA–CIC, 2020) y semiótica de la imagen fotográfica (CEA–UNC, 2023).</p>
-        <p>Sus fotografías se exhibieron en el Museo de Antropología de la UNC (2019). Entre 2019 y 2020 desarrolló <em>Putas con tiempo</em>, un proyecto en colaboración de pornografía y cartelería urbana, registrado en el documental <em>Coger contra todo</em> (UNC, 2021) y sobre el que publicó en la revista <em>Avances</em> de la Facultad de Artes (2023). Actualmente trabaja en <em>Backstage</em>, una serie sobre la producción de contenido sexual entre varones.</p>
+        <p>Soy <b>Ezequiel Aguilera</b> (Lechería, Venezuela, 1994), fotógrafo y antropólogo. Vivo y trabajo en Buenos Aires.</p>
+        <p>Mi práctica fotográfica explora las relaciones entre cuerpos, puesta en escena y circulación de imágenes, con especial interés en el erotismo, el desnudo y la pornografía. Trabajo en el cruce entre fotografía e investigación etnográfica, atendiendo a las relaciones que se construyen durante la producción de imágenes y a las formas en que estas circulan y son recibidas.</p>
+        <p>Soy doctorando en Ciencias Antropológicas en la Universidad Nacional de Córdoba, donde también me licencié en Antropología en 2021. Actualmente cuento con una beca del CONICET. Me formé en semiótica de la imagen fotográfica (CEA–UNC, 2023), lenguaje audiovisual en la ENERC (2020), guion y dirección para cine (2020) y producción audiovisual (APIMA–CIC, 2020).</p>
+        <p>Actualmente trabajo con materiales de producción y backstage de escenas pornográficas entre varones. Entre 2019 y 2020 desarrollé <em>Putas con tiempo</em>, un proyecto colaborativo que vinculó pornografía y cartelería urbana, registrado en el documental <em>Coger contra todo</em> (UNC, 2021) y abordado en una publicación en la revista <em>Avances</em> de la Facultad de Artes (2023). En 2019 expuse fotografías en el Museo de Antropología de la UNC.</p>
       </div>
       <div class="statement">
-        <p><span class="completar">Statement — borrador para reescribir:</span> Fotografío varones en los bordes de la pornografía: en la casa, en la calle, en el set. Me interesa lo que la imagen sexual tiene que esconder para poder circular —el rostro, el acto, el trabajo que la produce— y lo que aparece cuando ese recorte se vuelve visible. Mi práctica se cruza con mi investigación etnográfica sobre trabajo sexual y pornografía: las preguntas que hago en el campo vuelven en las imágenes.</p>
+        <h3 class="statement-tit">Statement</h3>
+        <p>De chico hacía collages con fotografías de cuerpos que encontraba en las revistas de casa. Años después comencé a fotografiar protestas y artistas; luego, el erotismo, el desnudo y la pornografía aparecieron como espacios de experimentación visual. Me interesaba producir imágenes con otras personas, explorar la exposición de los cuerpos y ensayar formas de mostrarse sin quedar necesariamente identificados.</p>
+        <p>En 2019, ese interés tomó forma en <em>Putas con tiempo</em>, un proyecto colaborativo de producción pornográfica en el que trabajábamos con máscaras, encuadres y otros recursos para construir imágenes que pudieran circular sin revelar por completo la identidad de quienes aparecían en ellas. Con el tiempo, mi trabajo se acercó cada vez más a la investigación etnográfica, sin abandonar la cámara. La fotografía pasó a formar parte de una práctica compartida con quienes producen imágenes sexuales, atenta a sus intereses, decisiones y formas de trabajar.</p>
+        <p>Me interesa observar qué sucede en la producción de una imagen, entre quien fotografía, quien posa y las demás personas que participan de la escena; también qué ocurre cuando esa imagen comienza a circular y encuentra distintas formas de recepción. Mi trabajo se mueve entre esos momentos, sin asumir que puedan separarse con claridad.</p>
+        <p>Actualmente trabajo con materiales de <em>Backstage</em>, una serie que toma como punto de partida aquello que se produce durante la realización de escenas pornográficas y que no siempre llega a circular. Entiendo el backstage como una categoría provisoria, una manera de acercarme a lo que queda fuera de una selección determinada de imágenes. Ese fuera de escena no constituye para mí un espacio de acceso privilegiado a lo real ni una versión definitiva de lo sucedido. También allí hay puesta en escena y decisiones. En un contexto en el que las plataformas digitales promueven cada vez más la exhibición de los procesos de producción y de aquello que antes permanecía fuera de cuadro, me interesa trabajar con ese material sin convertirlo en una revelación final.</p>
       </div>
     </div>
   </section>
@@ -144,8 +163,8 @@
       <article class="serie">
         <div>
           <h3>Proletário do pornô</h3>
-          <ul class="ficha"><li><b>Año</b> 2025</li><li><b>Técnica</b> Fotografía digital; acción en el espacio público</li><li><b>Serie</b> 5 imágenes</li><li><b>Lugar</b> Río de Janeiro, Brasil</li></ul>
-          <p class="serie-txt">Una acción en la calle durante la estadía en Río de Janeiro: el cuerpo del performer y la consigna escrita en el suelo y sobre plástico ponen el trabajo pornográfico en el lenguaje del trabajo. Retrato @fernando.brutto; producción @caianrangel.</p>
+          <ul class="ficha"><li><b>Año</b> 2025</li><li><b>Técnica</b> Fotografía digital; acción en el espacio público; PVC y aerosol</li><li><b>Serie</b> 5 imágenes</li><li><b>Lugar</b> Río de Janeiro, Brasil</li></ul>
+          <p class="serie-txt">Una acción en la calle durante la estadía en Río de Janeiro: el cuerpo del performer y la consigna escrita en el suelo y sobre plástico ponen el trabajo pornográfico en el lenguaje del trabajo. Producción: Caian Rangel. Modelo: Fernando Brutto.</p>
           <a class="ir" href="../fotografia/proletario-do-porno/">Ver serie ↗︎</a>
         </div>
         <div class="tira"><figure style="flex:1.500"><img src="../assets/fotografia/proletario-do-porno/04-thumb.jpg" alt="Proletário do pornô, imagen 4" loading="lazy"></figure><figure style="flex:1.500"><img src="../assets/fotografia/proletario-do-porno/05-thumb.jpg" alt="Proletário do pornô, imagen 5" loading="lazy"></figure><figure style="flex:1.500"><img src="../assets/fotografia/proletario-do-porno/01-thumb.jpg" alt="Proletário do pornô, imagen 1" loading="lazy"></figure></div>
@@ -154,19 +173,20 @@
         <div>
           <h3>Barbie Carioca</h3>
           <ul class="ficha"><li><b>Año</b> 2025</li><li><b>Técnica</b> Fotografía digital</li><li><b>Serie</b> 4 imágenes</li><li><b>Lugar</b> Río de Janeiro, Brasil</li></ul>
-          <p class="serie-txt">Un cuerpo en la costa carioca, entre la roca, la espuma y un manto que lo viste y lo expone. Idea y vestuario @caianrangel; escenografía y arte @charlieblack____; retrato @david_cerdas.</p>
+          <p class="serie-txt">Un cuerpo en la costa carioca, entre la roca, la espuma y un manto que lo viste y lo expone. Producción: Caian Rangel. Edición: Charlie Black. Modelo: David Cerdas.</p>
           <a class="ir" href="../fotografia/barbie-carioca/">Ver serie ↗︎</a>
         </div>
         <div class="tira"><figure style="flex:0.666"><img src="../assets/fotografia/barbie-carioca/01-thumb.jpg" alt="Barbie Carioca, imagen 1" loading="lazy"></figure><figure style="flex:0.666"><img src="../assets/fotografia/barbie-carioca/02-thumb.jpg" alt="Barbie Carioca, imagen 2" loading="lazy"></figure><figure style="flex:0.666"><img src="../assets/fotografia/barbie-carioca/03-thumb.jpg" alt="Barbie Carioca, imagen 3" loading="lazy"></figure></div>
       </article>
       <article class="serie">
         <div>
-          <h3>Dragón rojo</h3>
-          <ul class="ficha"><li><b>Año</b> 2025</li><li><b>Técnica</b> Fotografía digital</li><li><b>Serie</b> 8 imágenes</li></ul>
-          <p class="serie-txt">Retratos de un varón entre la pose del contenido erótico y la intimidad.</p>
-          <a class="ir" href="../fotografia/dragon-rojo/">Ver serie ↗︎</a>
+          <h3>Dragon Blooming</h3>
+          <ul class="ficha"><li><b>Año</b> 2025</li><li><b>Técnica</b> Fotografía digital; flores naturales</li><li><b>Serie</b> 8 imágenes</li><li><b>Publicación</b> Pornceptual</li></ul>
+          <p class="serie-txt">Fotos a un creador de contenido para adultos.</p>
+          <a class="ir" href="../fotografia/dragon-blooming/">Ver serie ↗︎</a>
+          <a class="ir" href="https://pornceptual.com/dragon-blooming/" target="_blank" rel="noopener">En Pornceptual ↗︎</a>
         </div>
-        <div class="tira"><figure style="flex:0.666"><img src="../assets/fotografia/dragon-rojo/01-thumb.jpg" alt="Dragón rojo, imagen 1" loading="lazy"></figure><figure style="flex:0.666"><img src="../assets/fotografia/dragon-rojo/03-thumb.jpg" alt="Dragón rojo, imagen 3" loading="lazy"></figure><figure style="flex:1.500"><img src="../assets/fotografia/dragon-rojo/05-thumb.jpg" alt="Dragón rojo, imagen 5" loading="lazy"></figure></div>
+        <div class="tira"><figure style="flex:0.666"><img src="../assets/fotografia/dragon-blooming/01-thumb.jpg" alt="Dragon Blooming, imagen 1" loading="lazy"></figure><figure style="flex:0.666"><img src="../assets/fotografia/dragon-blooming/03-thumb.jpg" alt="Dragon Blooming, imagen 3" loading="lazy"></figure><figure style="flex:1.500"><img src="../assets/fotografia/dragon-blooming/05-thumb.jpg" alt="Dragon Blooming, imagen 5" loading="lazy"></figure></div>
       </article>
       <article class="serie">
         <div>
@@ -180,7 +200,7 @@
       <article class="serie">
         <div>
           <h3>Putas con tiempo</h3>
-          <ul class="ficha"><li><b>Año</b> 2019–2020</li><li><b>Técnica</b> Producción audiovisual; fotografía intervenida con consignas; pegatina en la vía pública</li><li><b>Obra</b> Proyecto en colaboración</li><li><b>Exhibición</b> Museo de Antropología, UNC (2019)</li></ul>
+          <ul class="ficha"><li><b>Año</b> 2019–2020</li><li><b>Técnica</b> Fotografía, serigrafía, pegatina con engrudo</li><li><b>Obra</b> Proyecto en colaboración</li><li><b>Exhibición</b> Museo de Antropología, UNC (2019)</li></ul>
           <p class="serie-txt">Más de veinte producciones que retomaban la pornografía —en términos de lo sexualmente explícito— para circular en redes sociales y como afiches pegados en la calle. Dialogó con la escena posporno y el arte urbano de Córdoba. Varios afiches reutilizan fotografías propias —algunas de <em>Prakash</em>— con las consignas impresas encima y pegadas en la vía pública. Fue registrado en el documental <em>Coger contra todo</em> (UNC, 2021).</p>
           <a class="ir" href="https://revistas.unc.edu.ar/index.php/avances/article/view/41455" target="_blank" rel="noopener">Texto en Avances ↗︎</a>
         </div>
@@ -190,6 +210,7 @@
 
   <section class="obra-sec" id="cv-artistico">
     <span>03</span><h2>CV artístico</h2>
+    <p class="cv-id"><b>Ezequiel Aguilera</b> (Lechería, Venezuela, 1994). Vive y trabaja en Buenos Aires. mail@ezequielaguilera.com.ar · ezequielaguilera.com.ar</p>
     <div class="cva">
       <div>
         <h3>Exhibiciones y presentaciones</h3>
@@ -228,7 +249,8 @@
         </ul>
       </div>
     </div>
-    <p class="pdf"><button class="back-link" type="button" onclick="window.print()" style="background:none;border:0;border-bottom:1px solid currentColor;padding:0;cursor:pointer;color:inherit">Guardar como PDF ↓</button></p>
+    <p class="pdf"><button class="back-link imprimir" type="button" onclick="window.print()">Portfolio completo en PDF ↓</button>
+      <button class="back-link imprimir" type="button" onclick="document.body.classList.add('solo-cv');window.print()">CV en una página ↓</button></p>
   </section>
 </main>
 <footer>
@@ -244,6 +266,10 @@
 <script>
 const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav');
 if(toggle){toggle.addEventListener('click',()=>{const o=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!o));nav.classList.toggle('open');});}
+</script>
+<script>
+/* "CV en una página": imprime solo la seccion 03 y vuelve a la normalidad */
+window.addEventListener('afterprint',function(){document.body.classList.remove('solo-cv')});
 </script>
 </body>
 </html>
