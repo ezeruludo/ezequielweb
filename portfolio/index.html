@@ -39,7 +39,7 @@
 .obra-sec>span{font:11px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--fluor-tinta)}
 .bio{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start}
 .bio p{margin:0 0 18px;font-size:16px;line-height:1.55}
-.statement p{font:400 19px/1.45 var(--serif);margin:0 0 16px}
+.statement p{margin:0 0 18px;font-size:16px;line-height:1.55}
 .statement-tit{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fluor-tinta);margin:0 0 12px}
 .completar{background:rgba(238,100,119,.18);padding:0 .2em;font-style:normal}
 .serie{display:grid;grid-template-columns:260px 1fr;gap:36px;padding:34px 0;border-top:1px solid var(--ambar)}
@@ -52,8 +52,10 @@
 .serie .ir:hover{background:var(--ambar);color:var(--crema-rosa)}
 .tira{display:flex;gap:10px;align-items:flex-start;min-width:0}
 .tira figure{margin:0;min-width:0}
-.tira img{width:100%;height:auto;display:block}
-.cva{display:grid;grid-template-columns:1fr 1fr;gap:10px 6vw}
+.tira img,.tira video{width:100%;height:auto;display:block}
+.tira .solo-print{display:none}
+.cva{columns:2;column-gap:6vw}
+.cva-b{break-inside:avoid}
 .cva h3{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fluor-tinta);margin:26px 0 8px}
 .cva ul{list-style:none;margin:0;padding:0}
 .cva li{display:grid;grid-template-columns:86px 1fr;gap:12px;padding:8px 0;border-top:1px solid rgba(28,27,26,.18);font-size:14px;line-height:1.45}
@@ -63,7 +65,8 @@
 .cv-id{margin:-14px 0 18px;font-size:15px;max-width:none}
 @media(max-width:800px){
   .obra-head,.obra-sec{padding-left:22px;padding-right:22px}
-  .bio,.cva{grid-template-columns:1fr}
+  .bio{grid-template-columns:1fr}
+  .cva{columns:1}
   .serie{grid-template-columns:1fr;gap:18px}
   .tira{flex-wrap:wrap}
   .tira figure{flex-basis:calc(50% - 5px)!important}
@@ -79,20 +82,21 @@
   .tira img{filter:none!important}
   .completar{background:none;border-bottom:1px dotted #999}
   /* A4 mide menos de 800 px: se anula el diseño de celular */
-  .bio,.cva{display:block!important;columns:2;column-gap:8mm}
-  .bio>div,.cva>div{break-inside:auto}
+  .bio{display:block!important;columns:2;column-gap:8mm}
+  .cva{columns:2;column-gap:8mm}
+  .bio>div{break-inside:auto}
   .statement{break-before:column}
-  .cva>div+div{break-before:column}
   .obra-sec>span{display:none}
   .obra-sec>h2,.cva h3{break-after:avoid}
   .obra-head{padding-bottom:4mm}
   .obra-head h1{font-size:64px;margin:6mm 0 0}
   .serie{grid-template-columns:52mm 1fr!important;gap:6mm!important;padding:6mm 0!important}
+  .tira video{display:none!important}.tira .solo-print{display:block!important}
   .tira{flex-wrap:nowrap!important}
   .tira figure{flex-basis:auto!important}
   .obra-sec>h2{margin:2mm 0 6mm}
   .serie h3{font-size:24px}
-  .statement p{font-size:12.5px;line-height:1.4;margin:0 0 3mm}
+  .statement p{font-size:11.5px;line-height:1.45;margin:0 0 3mm}
   .bio p{font-size:11.5px;line-height:1.45;margin:0 0 3mm}
   /* CV en una pagina: solo la seccion 03, compacta */
   body.solo-cv .obra-head,body.solo-cv #bio,body.solo-cv #series{display:none!important}
@@ -134,14 +138,14 @@
     <span>01</span><h2>Bio</h2>
     <div class="bio">
       <div>
-        <p>Soy <b>Ezequiel Aguilera</b> (Lechería, Venezuela, 1994), fotógrafo y antropólogo. Vivo y trabajo en Buenos Aires.</p>
+        <p>Soy <b>Ezequiel Aguilera</b> (Lechería, Venezuela, 1994), fotógrafo y antropólogo. Vivo y trabajo en la Ciudad Autónoma de Buenos Aires.</p>
         <p>Mi práctica fotográfica explora las relaciones entre cuerpos, puesta en escena y circulación de imágenes, con especial interés en el erotismo, el desnudo y la pornografía. Trabajo en el cruce entre fotografía e investigación etnográfica, atendiendo a las relaciones que se construyen durante la producción de imágenes y a las formas en que estas circulan y son recibidas.</p>
         <p>Soy doctorando en Ciencias Antropológicas en la Universidad Nacional de Córdoba, donde también me licencié en Antropología en 2021. Actualmente cuento con una beca del CONICET. Me formé en semiótica de la imagen fotográfica (CEA–UNC, 2023), lenguaje audiovisual en la ENERC (2020), guion y dirección para cine (2020) y producción audiovisual (APIMA–CIC, 2020).</p>
         <p>Actualmente trabajo con materiales de producción y backstage de escenas pornográficas entre varones. Entre 2019 y 2020 desarrollé <em>Putas con tiempo</em>, un proyecto colaborativo que vinculó pornografía y cartelería urbana, registrado en el documental <em>Coger contra todo</em> (UNC, 2021) y abordado en una publicación en la revista <em>Avances</em> de la Facultad de Artes (2023). En 2019 expuse fotografías en el Museo de Antropología de la UNC.</p>
       </div>
       <div class="statement">
         <h3 class="statement-tit">Statement</h3>
-        <p>De chico hacía collages con fotografías de cuerpos que encontraba en las revistas de casa. Años después comencé a fotografiar protestas y artistas, y me acerqué al erotismo, el desnudo y la pornografía como espacios de experimentación visual. Me interesaba producir imágenes con otras personas, explorar la exposición de los cuerpos y ensayar formas de mostrarse sin quedar necesariamente identificados.</p>
+        <p>De chico hacía collages con fotografías de cuerpos que encontraba en las revistas de casa. En 2017 usé por primera vez una cámara réflex durante el Festival de la Diversidad en El Bolsón y, ese mismo año, comencé a fotografiar marchas en Córdoba, en el contexto de la cuarta ola feminista. Me interesaban las performances, los gestos, los cuerpos arengando, las consignas y los reclamos, las formas en que las demandas colectivas se expresaban y adquirían presencia en el espacio público. Más adelante comencé a fotografiar artistas, y algunas de esas colaboraciones incorporaron el erotismo y el desnudo como espacios de experimentación visual. A partir de allí, la pornografía se convirtió en otro terreno para explorar las formas en que los cuerpos se muestran, se representan y producen imágenes junto a otras personas.</p>
         <p>En 2019, ese interés tomó forma en <em>Putas con tiempo</em>, un proyecto colaborativo que vinculó la producción pornográfica con el arte urbano. A través de la fotografía, el collage, el esténcil, el aerosol y las pegatinas, explorábamos distintas formas de producir imágenes eróticas y hacerlas circular en el espacio público. Trabajábamos con máscaras, encuadres y otros recursos para evitar que quienes aparecían en las imágenes fueran reconocidos. El proyecto articulaba así la experimentación con los cuerpos y sus representaciones con intervenciones gráficas en la ciudad.</p>
         <p>Con el tiempo, mi trabajo se acercó a la investigación etnográfica, sin abandonar la cámara. La fotografía pasó a formar parte de una práctica compartida con quienes producen imágenes sexuales, atendiendo a sus intereses, decisiones y formas de trabajar. Me interesa observar qué sucede entre quien fotografía, quien posa y las demás personas que participan de una escena, así como las transformaciones que atraviesa una imagen cuando comienza a circular y encuentra distintas formas de recepción.</p>
         <p>Actualmente trabajo con materiales de <em>Backstage</em>, una serie que toma como punto de partida aquello que se produce durante la realización de escenas pornográficas y que no siempre llega a circular. Entiendo el backstage como una categoría provisoria para acercarme a lo que queda fuera de una selección determinada de imágenes. Ese fuera de escena no constituye un acceso privilegiado a lo real ni una versión definitiva de lo sucedido. También allí hay puesta en escena y decisiones. En un contexto en el que las plataformas digitales promueven cada vez más la exhibición de los procesos de producción y de aquello que antes permanecía fuera de cuadro, me interesa explorar qué sucede cuando esos materiales también se convierten en imágenes disponibles para ser vistas, seleccionadas y puestas en circulación.</p>
@@ -207,37 +211,22 @@
         </div>
         <div class="tira"><figure style="flex:0.750"><img src="../assets/portfolio/putas-con-tiempo/01-thumb.jpg" alt="Afiches de Putas con tiempo apilados" loading="lazy"></figure><figure style="flex:0.707"><img src="../assets/portfolio/putas-con-tiempo/02-thumb.jpg" alt="Afiche Sin Vihsibilidad no hay orgullo" loading="lazy"></figure><figure style="flex:1.782"><img src="../assets/portfolio/putas-con-tiempo/03-thumb.jpg?v=2" alt="Pegatina de un afiche en la calle" loading="lazy"></figure></div>
       </article>
+      <article class="serie">
+        <div>
+          <h3>Marchas</h3>
+          <ul class="ficha"><li><b>Año</b> 2017</li><li><b>Lugar</b> Córdoba</li><li><b>Técnica</b> Fotografía digital</li><li><b>Intervención</b> 127 retratos con un mismo cartel</li></ul>
+          <p class="serie-txt">En agosto de 2017, durante las movilizaciones por la aparición de Santiago Maldonado en Córdoba, retraté a 127 manifestantes que sostenían un mismo cartel. Alineados sobre su superficie, los retratos componen una secuencia y, al mismo tiempo, un mosaico de rostros que convierte la imagen individual en una composición colectiva.</p>
+          <a class="ir" href="../fotografia/marchas/">Ver serie ↗︎</a>
+        </div>
+        <div class="tira"><figure style="flex:0.750"><video src="../assets/fotografia/marchas/intervencion.mp4" poster="../assets/fotografia/marchas/intervencion-poster.jpg" autoplay muted loop playsinline preload="metadata" width="480" height="640" aria-label="Los 127 retratos en secuencia"></video><img class="solo-print" src="../assets/fotografia/marchas/intervencion-poster.jpg" alt="Retrato con el cartel"></figure><figure style="flex:1.5"><img src="../assets/fotografia/marchas/mosaico-thumb.jpg" alt="Mosaico de los 127 retratos" loading="lazy"></figure><figure style="flex:1.5"><img src="../assets/fotografia/marchas/03-thumb.jpg" alt="Manifestante con pañuelo violeta" loading="lazy"></figure></div>
+      </article>
   </section>
 
   <section class="obra-sec" id="cv-artistico">
     <span>03</span><h2>CV artístico</h2>
-    <p class="cv-id"><b>Ezequiel Aguilera</b> (Lechería, Venezuela, 1994). Vive y trabaja en Buenos Aires. mail@ezequielaguilera.com.ar · ezequielaguilera.com.ar</p>
+    <p class="cv-id"><b>Ezequiel Aguilera</b> (Lechería, Venezuela, 1994). Vive y trabaja en la Ciudad Autónoma de Buenos Aires. mail@ezequielaguilera.com.ar · ezequielaguilera.com.ar</p>
     <div class="cva">
-      <div>
-        <h3>Exhibiciones y presentaciones</h3>
-        <ul>
-          <li><b>2019</b><span><em>Trabajadorxs sexuales ocupan el Museo</em>. AMMAR Córdoba y Red por el Reconocimiento del Trabajo Sexual. Museo de Antropología, UNC, Córdoba.</span></li>
-          <li><b>2019</b><span><em>Putas con tiempo</em>. VII Encuentro de Estudiantes de Antropología, Museo de Antropología, UNC, Córdoba.</span></li>
-          <li><b>2018</b><span><em>Prakash Fotografía</em>. II Encuentro Nacional de Estudiantes de Antropología, Córdoba.</span></li>
-        </ul>
-        <h3>Audiovisual</h3>
-        <ul>
-          <li><b>2021</b><span><em>Coger contra todo</em>, documental, UNC. Participación con <em>Putas con tiempo</em>.</span></li>
-        </ul>
-        <h3>Publicaciones</h3>
-        <ul>
-          <li><b>2023</b><span>“Putas con tiempo”. Una experiencia artística pornográfica como interrogación de las políticas de la mirada. <em>Avances</em>, 32. Facultad de Artes, UNC.</span></li>
-          <li><b>2021</b><span>Textos en <em>Uno hace lo que puede, ¿no?: visualidades en tiempos de pandemia</em>. CONICET.</span></li>
-          <li><b>2017</b><span>Contribución en <em>Mariconcitos. Feminidades de niños, placeres de infancia</em>. Burgos y Theumer (comps.), Córdoba.</span></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Ponencias sobre la obra</h3>
-        <ul>
-          <li><b>2024</b><span>“Devenir pornógrafo”. 1eras Jornadas sobre pxrnografía, artes, medios y activismos, Buenos Aires.</span></li>
-          <li><b>2022</b><span>“Putas con tiempo”. XXV Jornadas de Investigación en Artes, Facultad de Artes, UNC.</span></li>
-        </ul>
-        <h3>Formación</h3>
+      <div class="cva-b"><h3>Formación</h3>
         <ul>
           <li><b>2026</b><span>Seminario “Postcognitivismo, experiencia y arte”, Dra. Diana I. Pérez, UBA.</span></li>
           <li><b>2023</b><span>“Semiótica de la imagen y del audiovisual. Teoría y crítica de la imagen fotográfica”, CEA–UNC.</span></li>
@@ -247,8 +236,28 @@
           <li><b>2020</b><span>Diplomatura en documental contemporáneo (cursada), Universidad Blas Pascal, FCC–UNC y Cineclub Municipal, Córdoba.</span></li>
           <li><b>2016</b><span>“El sostén está en la relación”, Cristian Setién. Danza contemporánea, Agencia Córdoba Cultura.</span></li>
           <li><b>2021</b><span>Licenciatura en Antropología, UNC. Mención de Honor, Premio Universidad (2022).</span></li>
-        </ul>
-      </div>
+        </ul></div>
+      <div class="cva-b"><h3>Publicaciones</h3>
+        <ul>
+          <li><b>2023</b><span>“Putas con tiempo”. Una experiencia artística pornográfica como interrogación de las políticas de la mirada. <em>Avances</em>, 32. Facultad de Artes, UNC.</span></li>
+          <li><b>2021</b><span>Textos en <em>Uno hace lo que puede, ¿no?: visualidades en tiempos de pandemia</em>. CONICET.</span></li>
+          <li><b>2017</b><span>Contribución en <em>Mariconcitos. Feminidades de niños, placeres de infancia</em>. Burgos y Theumer (comps.), Córdoba.</span></li>
+        </ul></div>
+      <div class="cva-b"><h3>Ponencias sobre la obra</h3>
+        <ul>
+          <li><b>2024</b><span>“Devenir pornógrafo”. 1eras Jornadas sobre pxrnografía, artes, medios y activismos, Buenos Aires.</span></li>
+          <li><b>2022</b><span>“Putas con tiempo”. XXV Jornadas de Investigación en Artes, Facultad de Artes, UNC.</span></li>
+        </ul></div>
+      <div class="cva-b"><h3>Audiovisual</h3>
+        <ul>
+          <li><b>2021</b><span><em>Coger contra todo</em>, documental, UNC. Participación con <em>Putas con tiempo</em>.</span></li>
+        </ul></div>
+      <div class="cva-b"><h3>Exhibiciones y presentaciones</h3>
+        <ul>
+          <li><b>2019</b><span><em>Trabajadorxs sexuales ocupan el Museo</em>. AMMAR Córdoba y Red por el Reconocimiento del Trabajo Sexual. Museo de Antropología, UNC, Córdoba.</span></li>
+          <li><b>2019</b><span><em>Putas con tiempo</em>. VII Encuentro de Estudiantes de Antropología, Museo de Antropología, UNC, Córdoba.</span></li>
+          <li><b>2018</b><span><em>Prakash Fotografía</em>. II Encuentro Nacional de Estudiantes de Antropología, Córdoba.</span></li>
+        </ul></div>
     </div>
     <p class="pdf"><button class="back-link imprimir" type="button" onclick="window.print()">Portfolio completo en PDF ↓</button>
       <button class="back-link imprimir" type="button" onclick="document.body.classList.add('solo-cv');window.print()">CV en una página ↓</button></p>
