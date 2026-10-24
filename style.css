@@ -256,7 +256,7 @@ body.lb-lock{overflow:hidden}
   --fluor:#EE6477;      /* sandía: reemplazó al flúo #FF3D86 el 15/10/2026 */
   --fluor-tinta:#B42236;   /* mismo rosa, densidad de tinta: para texto chico sobre claro */
   --flor:url("assets/orn/passiflora.svg");
-  --display:'Yeseva One', 'Abril Fatface', var(--serif);
+  --display:'Kaisei Tokumin', var(--serif);   /* reemplazó a Yeseva One el 24/10/2026 */
 }
 
 /* ---------- 1. SUSTRATO: papel + grano ---------- */
@@ -385,7 +385,7 @@ footer>*{position:relative}
    grado de inocencia, no la forma.
    ============================================================ */
 .hero h1,.section-head h2,.photo-title h2,.cv-band h2,.essay-card h3,.essay-head h1,.footer-name{
-  font-family:var(--display);font-weight:400;font-style:normal}
+  font-family:var(--display);font-weight:800;font-style:normal}
 .hero h1{letter-spacing:-.005em;line-height:.92;
   text-shadow:.030em .028em 0 var(--fluor), .060em .056em 0 var(--oro)}
 .section-head h2,.cv-band h2,.essay-head h1{letter-spacing:-.005em;line-height:.9;
@@ -621,7 +621,7 @@ body{overflow-x:clip}
 /* El corte de palabras va solo en celular: en escritorio partía
    "Trayectoria" en "Trayector / ia". */
 @media(max-width:800px){body{overflow-wrap:break-word}}
-/* Sin el corte, "Trayectoria" en Yeseva no entra en su columna: se ajusta
+/* Sin el corte, "Trayectoria" en la display no entra en su columna: se ajusta
    el tamaño al ancho de la columna en vez de partir la palabra. */
 @media(min-width:801px){.cv-band h2{font-size:clamp(48px,6.3vw,100px)}}
 @media(min-width:801px) and (max-width:960px){.essay-card h3{font-size:clamp(21px,2.6vw,25px)}}
@@ -682,9 +682,10 @@ body{overflow-x:clip}
    ============================================================ */
 /* Titulos: en vez de partir la palabra con guion ("Investigacio- / nes"),
    el cuerpo se ajusta al ancho de pantalla. El divisor es el ancho de la
-   palabra mas larga de cada titulo en Yeseva One, en em, con margen para
-   la sombra desplazada: Investigaciones 7.96, fotográficos 6.26,
-   Trayectoria 5.91, Stormtrooper 6.98. 44px = el padding lateral (22+22).
+   palabra mas larga de cada titulo, en em, con margen para la sombra
+   desplazada. Se calcularon con Yeseva One (Investigaciones 7.96,
+   fotográficos 6.26, Trayectoria 5.91, Stormtrooper 6.98); Kaisei Tokumin
+   800 es ~5 % mas angosta (7.55, 5.88, 5.68, 6.60), asi que siguen valiendo. 44px = el padding lateral (22+22).
    Arriba de ~420 px manda el tamaño de siempre. */
 @media(max-width:800px){
   .hero h1,.section-head h2,.photo-title h2,.cv-band h2,.essay-head h1{hyphens:manual}
