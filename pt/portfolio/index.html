@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfólio — Ezequiel Aguilera</title>
+<meta name="description" content="Portfólio de Ezequiel Aguilera: fotografia, pornografia e antropologia. Séries, bio e CV artístico.">
+<link rel="alternate" hreflang="es" href="https://ezequielaguilera.com.ar/portfolio/">
+<link rel="alternate" hreflang="en" href="https://ezequielaguilera.com.ar/en/portfolio/">
+<link rel="alternate" hreflang="pt" href="https://ezequielaguilera.com.ar/pt/portfolio/">
+<link rel="alternate" hreflang="x-default" href="https://ezequielaguilera.com.ar/portfolio/">
+<link rel="canonical" href="https://ezequielaguilera.com.ar/pt/portfolio/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ezequiel Aguilera">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="es_AR">
+<meta property="og:title" content="Portfolio — Ezequiel Aguilera">
+<meta property="og:description" content="Portfólio de Ezequiel Aguilera: fotografia, pornografia e antropologia. Séries, bio e CV artístico.">
+<meta property="og:url" content="https://ezequielaguilera.com.ar/pt/portfolio/">
+<meta property="og:image" content="https://ezequielaguilera.com.ar/assets/fotografia/backstage/04.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image:width" content="1350">
+<meta property="og:image:height" content="1800">
+<meta property="og:image:alt" content="Portfolio — Ezequiel Aguilera">
+<meta name="twitter:image" content="https://ezequielaguilera.com.ar/assets/fotografia/backstage/04.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Portfolio", "description": "Portfólio de Ezequiel Aguilera: fotografia, pornografia e antropologia. Séries, bio e CV artístico.", "url": "https://ezequielaguilera.com.ar/pt/portfolio/", "image": "https://ezequielaguilera.com.ar/assets/fotografia/backstage/04.jpg", "inLanguage": "pt", "creator": {"@type": "Person", "name": "Ezequiel Aguilera", "url": "https://ezequielaguilera.com.ar/"}}</script>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#31210F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Kaisei+Tokumin:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css?v=35">
+<style>
+/* ============================================================
+   OBRA — dossier para convocatorias de artistas (22/10/2026)
+   Estructura de la clase de Gonzalo Maciel: bio, obra con ficha
+   (titulo, serie, tecnica, año, exhibicion) y CV artistico de una
+   pagina, de lo mas reciente a lo mas antiguo. Se imprime limpio
+   a PDF desde el navegador (ver @media print al final).
+   ============================================================ */
+.obra-head{max-width:var(--max);margin:auto;padding:12vh 7vw 6vh;border-bottom:1px solid var(--ambar)}
+.obra-head h1{font:400 clamp(60px,9vw,140px)/.9 var(--display);margin:18px 0 26px;letter-spacing:-.005em;
+  text-shadow:.026em .024em 0 var(--fluor), .052em .048em 0 var(--oro)}
+.obra-sec{max-width:var(--max);margin:auto;padding:80px 7vw;border-bottom:1px solid var(--ambar)}
+.obra-sec>h2{font:400 clamp(40px,5vw,72px)/.95 var(--display);margin:10px 0 36px;letter-spacing:-.005em;
+  text-shadow:.026em .024em 0 var(--fluor)}
+.obra-sec>span{font:11px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--fluor-tinta)}
+.bio{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start}
+.bio p{margin:0 0 18px;font-size:16px;line-height:1.55}
+.bio-retrato{margin:0 0 24px;max-width:260px}.bio-retrato img{display:block;width:100%;height:auto}
+.statement p{margin:0 0 18px;font-size:16px;line-height:1.55}
+.statement-tit{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fluor-tinta);margin:0 0 12px}
+.completar{background:rgba(238,100,119,.18);padding:0 .2em;font-style:normal}
+.serie{padding:40px 0;border-top:1px solid var(--ambar)}
+.serie .tira{margin-bottom:20px}
+.serie-info{display:grid;grid-template-columns:260px 1fr;gap:36px}
+.serie-extra{margin:0 0 16px;font:11px/1.6 var(--mono);letter-spacing:.03em;text-transform:uppercase;opacity:.75}
+.serie:first-of-type{border-top:0;padding-top:0}
+.serie h3{font:400 34px/1 var(--display);margin:0 0 10px}
+.ficha{list-style:none;margin:0 0 16px;padding:0;font:11px/1.6 var(--mono);letter-spacing:.03em;text-transform:uppercase}
+.ficha b{font-weight:700}
+.serie-txt{margin:0 0 16px;font-size:14px;line-height:1.55}
+.serie .ir{display:inline-block;border:1px solid var(--ambar);padding:8px 13px;font:700 11px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.serie .ir:hover{background:var(--ambar);color:var(--crema-rosa)}
+.tira{display:flex;gap:10px;align-items:flex-start;min-width:0}
+.tira figure{margin:0;min-width:0}
+.tira img,.tira video{width:100%;height:auto;display:block}
+.tira .solo-print{display:none}
+.cva{columns:2;column-gap:6vw}
+.cva-b{break-inside:avoid}
+.cva h3{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fluor-tinta);margin:26px 0 8px}
+.cva ul{list-style:none;margin:0;padding:0}
+.cva li{display:grid;grid-template-columns:86px 1fr;gap:12px;padding:8px 0;border-top:1px solid rgba(28,27,26,.18);font-size:14px;line-height:1.45}
+.cva li b{font:11px var(--mono);font-weight:400;padding-top:2px}
+.pdf{margin-top:30px;display:flex;gap:28px;flex-wrap:wrap}
+.imprimir{background:none;border:0;border-bottom:1px solid currentColor;padding:0;cursor:pointer;color:inherit}
+.cv-id{margin:-14px 0 18px;font-size:15px;max-width:none}
+@media(max-width:800px){
+  .obra-head,.obra-sec{padding-left:22px;padding-right:22px}
+  .bio{grid-template-columns:1fr}
+  .cva{columns:1}
+  .serie-info{grid-template-columns:1fr;gap:4px}
+  .tira{flex-wrap:wrap}
+  .tira figure{flex-basis:calc(50% - 5px)!important}
+}
+@media print{
+  @page{size:A4;margin:14mm}
+  body{background:#fff!important}
+  body::after,.site-header,.menu-toggle,footer,.pdf,.serie .ir,.obra-head .back-link{display:none!important}
+  .obra-head,.obra-sec{padding:0 0 10mm;border:0;max-width:none}
+  .obra-head h1,.obra-sec>h2,.serie h3{text-shadow:none}
+  .serie,.cva li{break-inside:avoid}
+  #cv-artistico{break-before:page}
+  .tira img{filter:none!important}
+  .completar{background:none;border-bottom:1px dotted #999}
+  /* A4 mide menos de 800 px: se anula el diseño de celular */
+  .bio{display:block!important;columns:2;column-gap:8mm}
+  .cva{columns:2;column-gap:8mm}
+  .bio>div{break-inside:auto}
+  .statement{break-before:column}
+  .obra-sec>span{display:none}
+  .obra-sec>h2,.cva h3{break-after:avoid}
+  .obra-head{padding-bottom:4mm}
+  .obra-head h1{font-size:64px;margin:6mm 0 0}
+  .serie{padding:6mm 0!important}.serie .tira{margin-bottom:4mm}.serie-info{grid-template-columns:52mm 1fr!important;gap:6mm!important}
+  .tira video{display:none!important}.tira .solo-print{display:block!important}
+  .tira{flex-wrap:nowrap!important}
+  .tira figure{flex-basis:auto!important}
+  .obra-sec>h2{margin:2mm 0 6mm}
+  .serie h3{font-size:24px}
+  .statement p{font-size:11.5px;line-height:1.45;margin:0 0 3mm}
+  .bio-retrato{max-width:34mm;margin:0 0 4mm}
+  .bio p{font-size:11.5px;line-height:1.45;margin:0 0 3mm}
+  /* CV en una pagina: solo la seccion 03, compacta */
+  body.solo-cv .obra-head,body.solo-cv #bio,body.solo-cv #series{display:none!important}
+  body.solo-cv #cv-artistico{break-before:auto}
+  /* El CV va compacto siempre, para que entre en una sola carilla
+     tambien dentro del portfolio completo */
+  #cv-artistico>h2{font-size:30px;margin:0 0 3mm}
+  #cv-artistico .cv-id{margin:0 0 4mm;font-size:11px}
+  #cv-artistico .cva h3{margin:4mm 0 1.5mm;font-size:9px}
+  #cv-artistico .cva li{font-size:9.5px;padding:1.3mm 0;grid-template-columns:14mm 1fr;gap:3mm}
+  #cv-artistico .cva li b{font-size:8.5px}
+  #cv-artistico .cva{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a class="wordmark" href="../">EZEQUIEL<br>AGUILERA</a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="nav">MENU</button>
+  <nav id="nav" class="nav">
+    <a href="../#investigacion">Pesquisas</a>
+    <a href="../#publicaciones">Publicações</a>
+    <a href="../#fotografia">Fotografia</a>
+    <a href="../#cv">CV</a>
+    <a href="../#sobre-mi">Sobre mim</a>
+    <a href="../#contacto">Contato</a>
+    <a href="./" aria-current="page">Portfólio</a>
+    <span class="lang-switch" role="group" aria-label="Idioma"><a href="/portfolio/" hreflang="es" lang="es">ES</a><span aria-hidden="true">·</span><a href="/en/portfolio/" hreflang="en" lang="en">EN</a><span aria-hidden="true">·</span><a href="/pt/portfolio/" hreflang="pt" lang="pt" aria-current="true">PT</a></span>
+  </nav>
+</header>
+<main>
+  <section class="obra-head">
+    <a class="back-link" href="../">←︎ Início</a>
+    <div class="essay-meta">DOSSIÊ DE OBRA / FOTOGRAFIA · PORNOGRAFIA · ANTROPOLOGIA</div>
+    <h1>Portfólio</h1>
+  </section>
+
+  <section class="obra-sec" id="bio">
+    <span>01</span><h2>Bio</h2>
+    <div class="bio">
+      <div>
+        <figure class="bio-retrato"><img src="../../assets/portfolio/retrato-costado.jpg" alt="Retrato de Ezequiel Aguilera" width="960" height="1200" loading="lazy"></figure>
+        <p>Ezequiel Aguilera (Lechería, Venezuela, 1994) é fotógrafo e antropólogo. Vive e trabalha em Buenos Aires. Sua prática fotográfica aborda o erotismo, o nu e a pornografia, com especial atenção às situações de produção das imagens, aos vínculos entre quem participa delas e às suas formas de circulação.</p>
+        <p>Entre 2019 e 2020 desenvolveu <em>Putas con tiempo</em>, um projeto colaborativo que articulou pornografia e gráfica urbana por meio de fotografia, colagem, estêncil, spray e lambe-lambes. O projeto foi registrado no documentário <em>Coger contra todo</em> (2021) e abordado em uma publicação na revista <em>Avances</em> da Faculdade de Artes da Universidad Nacional de Córdoba (2023). Em 2019 expôs fotografias no Museu de Antropologia da Universidad Nacional de Córdoba. Atualmente trabalha com materiais de produção e bastidores de cenas pornográficas entre homens.</p>
+        <p>É graduado em Antropologia pela Universidad Nacional de Córdoba, onde cursa o Doutorado em Ciências Antropológicas com bolsa do CONICET. Formou-se em semiótica da imagem fotográfica no Centro de Estudios Avanzados da UNC (2023), em linguagem audiovisual na ENERC e em roteiro, direção cinematográfica e produção audiovisual.</p>
+      </div>
+      <div class="statement">
+        <h3 class="statement-tit">Statement</h3>
+        <p>Meu trabalho aborda as relações entre corpos, imagens e sexualidades, com especial atenção às situações de produção e às formas de circulação das imagens. Por meio da fotografia, da performance e da arte urbana, trabalho com o erotismo e a exposição dos corpos como parte de uma prática colaborativa. A pesquisa etnográfica acompanha esse processo e me permite situar os registros em relação aos vínculos, às decisões e aos contextos em que são produzidos.</p>
+        <p>Atualmente trabalho com materiais digitais de produção e bastidores de cenas pornográficas entre homens. Interessa-me atentar para as transformações que as imagens atravessam quando circulam e encontram diferentes formas de recepção, assim como para as relações que se constroem em torno delas. Em um contexto em que as plataformas e as redes sociais promovem cada vez mais a exibição dos processos de produção, o backstage constitui um ponto de partida para indagar o que acontece quando aquilo que permanecia fora de quadro também se torna imagem, disponível para ser vista, selecionada e posta em circulação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="obra-sec" id="series">
+    <span>02</span><h2>Séries</h2>
+      <article class="serie">
+        <div class="tira"><figure style="flex:0.750"><img src="../../assets/fotografia/backstage/04-thumb.jpg?v=3" alt="Silhueta em uma sauna" loading="lazy"></figure><figure style="flex:0.750"><img src="../../assets/fotografia/backstage/01-thumb.jpg?v=3" alt="Celular filmando um casal" loading="lazy"></figure><figure style="flex:0.750"><img src="../../assets/fotografia/backstage/17-thumb.jpg?v=3" alt="Silhuetas em um set com luzes" loading="lazy"></figure></div>
+        <div class="serie-info">
+          <div class="cartela"><h3>Backstage</h3><ul class="ficha"><li>Fotografia digital e intervenção digital</li><li>Dimensões variáveis</li><li>2023–2025</li></ul></div>
+          <div>
+            <p class="serie-txt">Cenas de produção de conteúdo sexual entre homens. Os atos sexuais aparecem como silhuetas pretas recortadas sobre o interior real; as fotografias com rosto não mostram o ato. A série trabalha a fronteira entre o que se exibe e o que precisa desaparecer para que a imagem possa circular.</p>
+            <p class="serie-extra">Série de 20 imagens</p>
+            <a class="ir" href="../../fotografia/backstage/">Ver série ↗︎</a>
+          </div>
+        </div>
+      </article>
+      <article class="serie">
+        <div class="tira"><figure style="flex:1.500"><img src="../../assets/fotografia/proletario-do-porno/08-thumb.jpg?v=2" alt="Proletário do pornô, imagem 8" loading="lazy"></figure><figure style="flex:1.500"><img src="../../assets/fotografia/proletario-do-porno/09-thumb.jpg?v=2" alt="Proletário do pornô, imagem 9" loading="lazy"></figure><figure style="flex:1.500"><img src="../../assets/fotografia/proletario-do-porno/04-thumb.jpg?v=2" alt="Proletário do pornô, imagem 4" loading="lazy"></figure></div>
+        <div class="serie-info">
+          <div class="cartela"><h3>Proletário do pornô</h3><ul class="ficha"><li>Fotografia digital, ação no espaço público, PVC e spray</li><li>Dimensões variáveis</li><li>2025</li></ul></div>
+          <div>
+            <p class="serie-txt">Uma ação na rua durante a estadia no Rio de Janeiro: o corpo do performer e a palavra de ordem escrita no chão e sobre plástico colocam o trabalho pornográfico na linguagem do trabalho. Produção: Caian Rangel. Modelo: Fernando Brutto.</p>
+            <p class="serie-extra">Série de 9 imagens · Rio de Janeiro, Brasil</p>
+            <a class="ir" href="../../fotografia/proletario-do-porno/">Ver série ↗︎</a>
+          </div>
+        </div>
+      </article>
+      <article class="serie">
+        <div class="tira"><figure style="flex:0.666"><img src="../../assets/fotografia/barbie-carioca/02-thumb.jpg?v=2" alt="Barbie Carioca, imagem 2" loading="lazy"></figure><figure style="flex:0.666"><img src="../../assets/fotografia/barbie-carioca/04-thumb.jpg?v=2" alt="Barbie Carioca, imagem 4" loading="lazy"></figure><figure style="flex:0.666"><img src="../../assets/fotografia/barbie-carioca/06-thumb.jpg?v=2" alt="Barbie Carioca, imagem 6" loading="lazy"></figure></div>
+        <div class="serie-info">
+          <div class="cartela"><h3>Barbie Carioca</h3><ul class="ficha"><li>Fotografia digital</li><li>Dimensões variáveis</li><li>2025</li></ul></div>
+          <div>
+            <p class="serie-txt">Um corpo na costa carioca, entre a rocha, a espuma e um manto que o veste e o expõe. Produção: Caian Rangel. Edição: Charlie Black. Modelo: David Cerdas.</p>
+            <p class="serie-extra">Série de 10 imagens · Rio de Janeiro, Brasil</p>
+            <a class="ir" href="../../fotografia/barbie-carioca/">Ver série ↗︎</a>
+          </div>
+        </div>
+      </article>
+      <article class="serie">
+        <div class="tira"><figure style="flex:0.666"><img src="../../assets/fotografia/dragon-blooming/01-thumb.jpg" alt="Dragon Blooming, imagem 1" loading="lazy"></figure><figure style="flex:0.666"><img src="../../assets/fotografia/dragon-blooming/03-thumb.jpg" alt="Dragon Blooming, imagem 3" loading="lazy"></figure><figure style="flex:1.500"><img src="../../assets/fotografia/dragon-blooming/05-thumb.jpg" alt="Dragon Blooming, imagem 5" loading="lazy"></figure></div>
+        <div class="serie-info">
+          <div class="cartela"><h3>Dragon Blooming</h3><ul class="ficha"><li>Fotografia digital e flores naturais</li><li>Dimensões variáveis</li><li>2025</li></ul></div>
+          <div>
+            <p class="serie-txt">Fotos de um criador de conteúdo adulto.</p>
+            <p class="serie-extra">Série de 8 imagens · Publicada na Pornceptual</p>
+            <a class="ir" href="../../fotografia/dragon-blooming/">Ver série ↗︎</a>
+<a class="ir" href="https://pornceptual.com/dragon-blooming/" target="_blank" rel="noopener">Na Pornceptual ↗︎</a>
+          </div>
+        </div>
+      </article>
+      <article class="serie">
+        <div class="tira"><figure style="flex:1.500"><img src="../../assets/fotografia/prakash/06-thumb.jpg?v=3" alt="Prakash, imagem 6" loading="lazy"></figure><figure style="flex:1.778"><video src="../../assets/fotografia/prakash/video.mp4" poster="../../assets/fotografia/prakash/video-poster.jpg" autoplay muted loop playsinline preload="metadata" width="960" height="540" aria-label="Trecho de vídeo de Prakash"></video><img class="solo-print" src="../../assets/fotografia/prakash/video-poster.jpg" alt="Fotograma de vídeo de Prakash"></figure><figure style="flex:1.500"><img src="../../assets/fotografia/prakash/19-thumb.jpg?v=3" alt="Prakash, imagem 19" loading="lazy"></figure></div>
+        <div class="serie-info">
+          <div class="cartela"><h3>Prakash</h3><ul class="ficha"><li>Fotografia digital</li><li>Dimensões variáveis</li><li>2016–2018</li></ul></div>
+          <div>
+            <p class="serie-txt">Série de longa duração: drag, máscaras, véus, corpos na cidade.</p>
+            <p class="serie-extra">Série de 20 imagens e um vídeo · Exibida no II Encuentro Nacional de Estudiantes de Antropología, Córdoba (2018)</p>
+            <a class="ir" href="../../fotografia/prakash/">Ver série ↗︎</a>
+          </div>
+        </div>
+      </article>
+      <article class="serie">
+        <div class="tira"><figure style="flex:1.778"><video src="../../assets/fotografia/putas-con-tiempo/v3-pasillo.mp4" poster="../../assets/fotografia/putas-con-tiempo/v3-pasillo-poster.jpg" autoplay muted loop playsinline preload="metadata" width="960" height="540" aria-label="Trecho de vídeo de Putas con tiempo"></video><img class="solo-print" src="../../assets/fotografia/putas-con-tiempo/v3-pasillo-poster.jpg" alt="Fotograma de vídeo de Putas con tiempo"></figure><figure style="flex:0.707"><img src="../../assets/portfolio/putas-con-tiempo/02-thumb.jpg" alt="Cartaz “Sin Vihsibilidad no hay orgullo”" loading="lazy"></figure><figure style="flex:1.782"><img src="../../assets/portfolio/putas-con-tiempo/03-thumb.jpg?v=2" alt="Colagem de um cartaz na rua" loading="lazy"></figure></div>
+        <div class="serie-info">
+          <div class="cartela"><h3>Putas con tiempo</h3><ul class="ficha"><li>Fotografia, colagem, estêncil sobre radiografias, spray e lambe-lambe com grude</li><li>Dimensões variáveis</li><li>2019–2020</li></ul></div>
+          <div>
+            <p class="serie-txt">Mais de vinte produções que retomavam a pornografia — em termos do sexualmente explícito — para circular nas redes sociais e como cartazes colados na rua. Dialogou com a cena pós-pornô e a arte urbana de Córdoba. Vários cartazes reutilizam fotografias próprias — algumas de <em>Prakash</em> — com as palavras de ordem em estêncil e spray por cima, coladas na via pública. Foi registrado no documentário <em>Coger contra todo</em> (2021).</p>
+            <p class="serie-extra">Projeto colaborativo · Exibido no Museu de Antropologia, UNC (2019)</p>
+            <a class="ir" href="../../fotografia/putas-con-tiempo/">Ver série ↗︎</a>
+<a class="ir" href="https://revistas.unc.edu.ar/index.php/avances/article/view/41455" target="_blank" rel="noopener">Texto na Avances (em espanhol) ↗︎</a>
+          </div>
+        </div>
+      </article>
+      <article class="serie">
+        <div class="tira"><figure style="flex:0.750"><img src="../../assets/fotografia/marchas/intervencion.webp" alt="Os 127 retratos em sequência, alinhados sobre o cartaz"></figure><figure style="flex:1.5"><img src="../../assets/fotografia/marchas/mosaico-thumb.jpg?v=3" alt="Mosaico dos 127 retratos" loading="lazy"></figure><figure style="flex:0.667"><img src="../../assets/fotografia/marchas/08-thumb.jpg?v=2" alt="Drag queen com o lenço “Trabajo sexual es trabajo” (Trabalho sexual é trabalho)" loading="lazy"></figure></div>
+        <div class="serie-info">
+          <div class="cartela"><h3>Marchas</h3><ul class="ficha"><li>Fotografia digital</li><li>Dimensões variáveis</li><li>2017–2018</li></ul></div>
+          <div>
+            <p class="serie-txt">Entre 2017 e 2018 fotografei marchas e mobilizações em Córdoba: a luta pela legalização do aborto, as reivindicações docentes, as intervenções de trabalhadoras sexuais e a exigência pelo aparecimento de Santiago Maldonado. Em algumas dessas convocatórias propus dispositivos fotográficos com cartazes. Em 2017, pelos 17 anos da AMMAR Córdoba, retratei quem segurava os cartazes da organização. No mesmo ano, durante as mobilizações por Santiago Maldonado, retratei 127 manifestantes que seguravam um mesmo cartaz. Alinhados sobre sua superfície, os retratos compõem uma sequência e, ao mesmo tempo, um mosaico de rostos que converte a imagem individual em uma composição coletiva.</p>
+            <p class="serie-extra">Córdoba · Série de 9 fotografias e 2 sequências</p>
+            <a class="ir" href="../../fotografia/marchas/">Ver série ↗︎</a>
+          </div>
+        </div>
+      </article>
+  </section>
+
+  <section class="obra-sec" id="cv-artistico">
+    <span>03</span><h2>CV artístico</h2>
+    <p class="cv-id"><b>Ezequiel Aguilera</b> (Lechería, Venezuela, 1994). Vive e trabalha em Buenos Aires. mail@ezequielaguilera.com.ar · ezequielaguilera.com.ar</p>
+    <div class="cva">
+      <div class="cva-b"><h3>Formação</h3>
+        <ul>
+          <li><b>2026</b><span>Seminário “Pós-cognitivismo, experiência e arte”, Dra. Diana I. Pérez, UBA.</span></li>
+          <li><b>2023</b><span>“Semiótica da imagem e do audiovisual. Teoria e crítica da imagem fotográfica”, CEA–UNC.</span></li>
+          <li><b>2020</b><span>“A arte de narrar com imagens”, Claudio De Gasperi. ENERC – Manzana de las Luces.</span></li>
+          <li><b>2020</b><span>Roteiro e direção de cinema, Delfina Jaureguialzo.</span></li>
+          <li><b>2020</b><span>Especialização em produção audiovisual, APIMA–CIC.</span></li>
+          <li><b>2020</b><span>Curso de documentário contemporâneo (cursado), Universidad Blas Pascal, FCC–UNC e Cineclub Municipal, Córdoba.</span></li>
+          <li><b>2016</b><span>“O apoio está na relação”, Cristian Setién. Dança contemporânea, Agencia Córdoba Cultura.</span></li>
+          <li><b>2021</b><span>Graduação em Antropologia, UNC. Menção Honrosa, Prêmio Universidade (2022).</span></li>
+        </ul></div>
+      <div class="cva-b"><h3>Publicações</h3>
+        <ul>
+          <li><b>2023</b><span>“Putas con tiempo”. Una experiencia artística pornográfica como interrogación de las políticas de la mirada. <em>Avances</em>, 32. Facultad de Artes, UNC.</span></li>
+          <li><b>2021</b><span>Textos em <em>Uno hace lo que puede, ¿no?: visualidades en tiempos de pandemia</em>. CONICET.</span></li>
+          <li><b>2017</b><span>Contribuição em <em>Mariconcitos. Feminidades de niños, placeres de infancia</em>. Burgos e Theumer (orgs.), Córdoba.</span></li>
+        </ul></div>
+      <div class="cva-b"><h3>Comunicações sobre a obra</h3>
+        <ul>
+          <li><b>2024</b><span>“Devenir pornógrafo”. 1eras Jornadas sobre pxrnografía, artes, medios y activismos, Buenos Aires.</span></li>
+          <li><b>2022</b><span>“Putas con tiempo”. XXV Jornadas de Investigación en Artes, Facultad de Artes, UNC.</span></li>
+        </ul></div>
+      <div class="cva-b"><h3>Audiovisual</h3>
+        <ul>
+          <li><b>2021</b><span><em>Coger contra todo</em>, documentário, UNC. Participação com <em>Putas con tiempo</em>.</span></li>
+        </ul></div>
+      <div class="cva-b"><h3>Exposições e apresentações</h3>
+        <ul>
+          <li><b>2019</b><span><em>Trabajadorxs sexuales ocupan el Museo</em>. AMMAR Córdoba e Red por el Reconocimiento del Trabajo Sexual. Museu de Antropologia, UNC, Córdoba.</span></li>
+          <li><b>2019</b><span><em>Putas con tiempo</em>. VII Encuentro de Estudiantes de Antropología, Museu de Antropologia, UNC, Córdoba.</span></li>
+          <li><b>2018</b><span><em>Prakash Fotografía</em>. II Encuentro Nacional de Estudiantes de Antropología, Córdoba.</span></li>
+        </ul></div>
+    </div>
+    <p class="pdf"><button class="back-link imprimir" type="button" onclick="window.print()">Portfólio completo em PDF ↓</button>
+      <button class="back-link imprimir" type="button" onclick="document.body.classList.add('solo-cv');window.print()">CV em uma página ↓</button></p>
+  </section>
+</main>
+<footer>
+  <div class="footer-name">EZEQUIEL<br>AGUILERA</div>
+  <div class="footer-links">
+    <a href="https://orcid.org/0000-0003-1068-4285" target="_blank" rel="noopener">ORCID</a>
+    <a href="https://scholar.google.com/citations?user=EoppxCoAAAAJ&amp;hl=es" target="_blank" rel="noopener">GOOGLE SCHOLAR</a>
+    <a href="https://bicyt.conicet.gov.ar/fichas/p/aguilera-matute-ezequiel-de-jesus" target="_blank" rel="noopener">CONICET</a>
+    <a class="footer-mail" href="mailto:mail@ezequielaguilera.com.ar"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true" focusable="false"><rect x="1.5" y="3.5" width="13" height="9"/><path d="M1.5 4.3 8 9.1l6.5-4.8"/></svg>mail@ezequielaguilera.com.ar</a>
+  </div>
+  <div class="footer-meta">IDACOR — CONICET / UNC<br>CÓRDOBA / ARGENTINA<br>© 2026</div>
+</footer>
+<script>
+const toggle=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav');
+if(toggle){toggle.addEventListener('click',()=>{const o=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!o));nav.classList.toggle('open');});}
+</script>
+<script>
+/* "CV en una página": imprime solo la seccion 03 y vuelve a la normalidad */
+window.addEventListener('afterprint',function(){document.body.classList.remove('solo-cv')});
+</script>
+</body>
+</html>

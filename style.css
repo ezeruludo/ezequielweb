@@ -753,3 +753,12 @@ body{overflow-x:clip}
   .nav{grid-column:auto;left:0;right:0;width:auto}
   .menu-toggle{color:inherit;-webkit-appearance:none;appearance:none;padding:6px 0;cursor:pointer}
 }
+
+/* ============================================================
+   IDIOMAS (27/10/2026): selector ES · EN · PT y título traducido
+   en las placas de Publicaciones de /en/ y /pt/.
+   ============================================================ */
+.lang-switch{display:inline-flex;align-items:center;gap:.45em;white-space:nowrap}
+.lang-switch span{opacity:.45}
+.lang-switch a[aria-current]{color:var(--fluor-tinta);border-bottom-color:currentColor}
+.placa-trad{margin:-4px 0 10px;font-family:var(--serif);font-style:italic;font-size:15px;line-height:1.3;opacity:.85}
