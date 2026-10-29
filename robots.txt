@@ -1,17 +1,13 @@
 User-agent: *
 Allow: /
 
-# Buscadores permitidos. Entrenamiento de modelos y agentes, bloqueados.
+# Buscadores permitidos, incluidos los de asistentes de IA que citan fuentes
+# (OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User).
+# Bloqueado: la recolección de textos para entrenar modelos.
 User-agent: GPTBot
 Disallow: /
 
-User-agent: ChatGPT-User
-Disallow: /
-
 User-agent: ClaudeBot
-Disallow: /
-
-User-agent: Claude-User
 Disallow: /
 
 User-agent: anthropic-ai
@@ -27,12 +23,6 @@ User-agent: Applebot-Extended
 Disallow: /
 
 User-agent: Bytespider
-Disallow: /
-
-User-agent: PerplexityBot
-Disallow: /
-
-User-agent: Perplexity-User
 Disallow: /
 
 User-agent: Amazonbot
